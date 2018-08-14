@@ -228,7 +228,7 @@ const IndexPage = () => (
             <h2>Supported languages</h2>
             <div className="language-boxes">
               <div className="language-box-container">
-                <a href="ruby.html">
+                <a href="/ruby">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconRuby} />
@@ -239,7 +239,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="javascript.html">
+                <a href="/javascript">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconJs} />
@@ -250,7 +250,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="python.html">
+                <a href="/python">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconPython} />
@@ -261,7 +261,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="php.html">
+                <a href="/php">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconPhp} />
@@ -272,7 +272,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="elixir.html">
+                <a href="/elixir">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconElixir} />
@@ -283,7 +283,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="rust.html">
+                <a href="/rust">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconRust} />
@@ -294,7 +294,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="java.html">
+                <a href="/java">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconJava} />
@@ -305,7 +305,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="java.html">
+                <a href="/java">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconGradle} />
@@ -316,7 +316,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="dotnet.html">
+                <a href="/dotnet">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconDotnet} />
@@ -327,7 +327,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="go.html">
+                <a href="/go">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconGo} />
@@ -338,7 +338,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="elm.html">
+                <a href="/elm">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconElm} />
@@ -349,7 +349,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="submodules.html">
+                <a href="/submodules">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconGit} />
@@ -360,7 +360,7 @@ const IndexPage = () => (
                 </a>
               </div>
               <div className="language-box-container">
-                <a href="docker.html">
+                <a href="/docker">
                   <div className="language-box">
                     <div className="language-icon">
                       <img src={iconDocker} />

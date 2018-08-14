@@ -27,28 +27,44 @@ export default class Nav extends React.Component {
     return (
       <nav className={navClasses.join(' ')}>
         <div className="nav-left">
-          <a className="nav-item">
+          <a className="nav-item" href="/">
             <img className="nav-logo" src={logo} alt="Dependabot" />
           </a>
           <div className="nav-menu-wrapper">
             <div className="nav-menu-container">
               <a
                 className="nav-item"
-                href="#how-it-works"
+                href="/#how-it-works"
                 onClick={() => this.hideNav()}
               >
                 How it works
               </a>
-              <a className="nav-item" href="#features">
+              <a
+                className="nav-item"
+                href="/#features"
+                onClick={() => this.hideNav()}
+              >
                 Features
               </a>
-              <a className="nav-item" href="#languages">
+              <a
+                className="nav-item"
+                href="/#languages"
+                onClick={() => this.hideNav()}
+              >
                 Languages
               </a>
-              <a className="nav-item" href="#customers">
+              <a
+                className="nav-item"
+                href="/#customers"
+                onClick={() => this.hideNav()}
+              >
                 Customers
               </a>
-              <a className="nav-item" href="#pricing">
+              <a
+                className="nav-item"
+                href="/#pricing"
+                onClick={() => this.hideNav()}
+              >
                 Pricing
               </a>
               <a className="nav-item" href="/blog">
