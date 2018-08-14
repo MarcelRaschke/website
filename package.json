@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "dependabot-website",
+  "description": "https://dependabot.com/",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Harry Marr <harry.marr@gmail.com>",
   "dependencies": {
     "date-fns": "^1.29.0",
     "gatsby": "^1.9.277",
@@ -17,10 +17,6 @@
     "normalize.css": "^8.0.0",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -32,6 +28,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/dependabot/website"
   }
 }
