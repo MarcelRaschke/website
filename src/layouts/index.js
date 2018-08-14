@@ -11,8 +11,15 @@ const Layout = ({ children, data }) => (
     <Helmet
       title="Dependabot"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          name: 'description',
+          content:
+            'Automated dependency updates. Dependabot creates pull requests to keep your Ruby, Python, JavaScript, PHP, .NET, Go, Elixir, Rust and Java dependencies up-to-date.',
+        },
+        {
+          name: 'keywords',
+          content: 'dependencies, update, npm, yarn, bundler, pip, composer',
+        },
       ]}
     />
     {children()}
