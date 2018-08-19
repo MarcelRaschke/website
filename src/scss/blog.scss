@@ -54,6 +54,10 @@
 .blog .cta {
   color: $text-muted;
   margin: 2rem 0;
+
+  .button {
+    margin-right: 5px;
+  }
 }
 
 .blog .footer {
