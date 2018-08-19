@@ -33,11 +33,11 @@ const PythonPage = () => (
           <div className="feature-boxes">
             <div className="feature-box">
               <div className="feature-description">
-                <h3>Pipenv and pip-compile support</h3>
+                <h3>Pipenv, Poetry and pip-compile support</h3>
                 <p>
-                  Using Pipenv or pip-tools? Dependabot can update your Pipfile
-                  and Pipfile.lock instead of working from a requirements.txt,
-                  or can work with pip-tools' requirements.in files.
+                  Using Pipenv, Poetry or pip-tools? Dependabot can keep all
+                  three's manifest and lockfiles up-to-date, as well as working
+                  with plain old requirements.txt files.
                 </p>
               </div>
             </div>
