@@ -4,4 +4,14 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
- // You can delete this file if you're not using it
+exports.onRouteUpdate = ({ location }) => {
+  if (location.hash) {
+    setTimeout(() => {
+      const name = location.hash.replace(/^#/, '')
+      const target = document.querySelector(`[name="${name}"`)
+      if (target) {
+        target.scrollIntoView()
+      }
+    }, 0)
+  }
+}
