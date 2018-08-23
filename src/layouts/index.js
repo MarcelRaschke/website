@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Header from './header'
 import 'normalize.css'
 import '../scss/main.scss'
+import favicon from '../images/favicon.ico'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -21,6 +22,7 @@ const Layout = ({ children, data }) => (
           content: 'dependencies, update, npm, yarn, bundler, pip, composer',
         },
       ]}
+      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
     {children()}
   </div>
