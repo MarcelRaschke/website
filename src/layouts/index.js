@@ -15,7 +15,7 @@ const Layout = ({ children, data }) => (
         {
           name: 'description',
           content:
-            'Automated dependency updates. Dependabot creates pull requests to keep your Ruby, Python, JavaScript, PHP, .NET, Go, Elixir, Rust and Java dependencies up-to-date.',
+            'Automated dependency updates for your Ruby, Python, JavaScript, PHP, .NET, Go, Elixir, Rust, Java and Elm.',
         },
         {
           name: 'keywords',

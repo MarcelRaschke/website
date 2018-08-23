@@ -25,6 +25,7 @@ import iconGradle from '../images/icon-gradle.svg'
 import iconDotnet from '../images/icon-dotnet.svg'
 import iconGo from '../images/icon-go.svg'
 import iconElm from '../images/icon-elm.svg'
+import iconTerraform from '../images/icon-terraform.svg'
 import iconGit from '../images/icon-git.svg'
 import iconDocker from '../images/icon-docker.svg'
 import iconStackTick from '../images/icon-stack-tick.svg'
@@ -367,6 +368,17 @@ const IndexPage = () => (
                     </div>
                     <div className="language-caveat" />
                     <div className="language-name">Docker</div>
+                  </div>
+                </a>
+              </div>
+              <div className="language-box-container">
+                <a href="/terraform">
+                  <div className="language-box">
+                    <div className="language-icon">
+                      <img src={iconTerraform} />
+                    </div>
+                    <div className="language-caveat">ALPHA</div>
+                    <div className="language-name">Terraform</div>
                   </div>
                 </a>
               </div>
