@@ -15,3 +15,5 @@ exports.onRouteUpdate = ({ location }) => {
     }, 0)
   }
 }
+
+exports.shouldUpdateScroll = () => !window.location.hash
