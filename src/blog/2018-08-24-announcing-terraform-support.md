@@ -5,7 +5,7 @@ date:   2018-08-24 12:00:00 +0100
 ---
 
 Using Terraform to manage your infrastructure? Dependabot can now help keep
-your Terraform modules up-to-date. 🎉
+your Terraform modules up-to-date.
 
 <p class="image-medium">
   <img src="images/terraform-logo.svg" alt="Terraform logo" height="100px" />
