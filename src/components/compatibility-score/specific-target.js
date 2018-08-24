@@ -9,7 +9,7 @@ class SpecificTarget extends React.Component {
     let { newVersion } = this.props
 
     if (newVersion === 'latest') {
-      newVersion = data.latest_version
+      newVersion = data ? data.latest_version : '...'
     }
 
     return (

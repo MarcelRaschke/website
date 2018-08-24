@@ -11,7 +11,7 @@ import dependabotLogo from '../images/dependabot-logo-square.svg'
 class CompatibilityScorePage extends React.Component {
   state = { params: {}, data: null }
 
-  async componentDidMount() {
+  componentDidMount() {
     const { location } = this.props
     const queryParams = queryString.parse(location.search)
     const params = {
@@ -30,12 +30,17 @@ class CompatibilityScorePage extends React.Component {
         'package-manager': params.packageManager,
         'version-scheme': 'semver',
       })
-    const response = await fetch(apiUrl)
+
     //const XXXapiUrl =
     //  'https://cors-anywhere.herokuapp.com/' + apiUrl.replace('https://', '')
     //const response = await fetch(XXXapiUrl)
-    const data = await response.json()
-    this.setState({ data })
+    fetch(apiUrl)
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        this.setState({ data })
+      })
   }
 
   render() {
