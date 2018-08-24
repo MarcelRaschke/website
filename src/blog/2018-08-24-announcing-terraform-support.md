@@ -8,7 +8,7 @@ Using Terraform to manage your infrastructure? Dependabot can now help keep
 your Terraform modules up-to-date. 🎉
 
 <p class="image-medium">
-  <img src="images/terraform-logo.svg" alt="Elm logo" height="100px" />
+  <img src="images/terraform-logo.svg" alt="Terraform logo" height="100px" />
 </p>
 
 Here's how it works:
