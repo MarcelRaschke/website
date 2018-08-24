@@ -21,6 +21,37 @@ class CompatibilityScorePage extends React.Component {
       previousVersion: queryParams['previous-version'],
       newVersion: queryParams['new-version'],
     }
+
+    // If we're hitting the page with no expectations, let's show the semver
+    // compatibility for a common dependency
+    if (
+      !params.previousVersion &&
+      !params.newVersion &&
+      !params.dependencyName &&
+      !params.packageManager
+    ) {
+      const popularDependencies = [
+        ['uglifier', 'bundler'],
+        ['sinatra', 'bundler'],
+        ['rubocop', 'bundler'],
+        ['rails', 'bundler'],
+        ['puma', 'bundler'],
+        ['webpack', 'npm_and_yarn'],
+        ['eslint', 'npm_and_yarn'],
+        ['react', 'npm_and_yarn'],
+        ['jest', 'npm_and_yarn'],
+        ['django', 'pip'],
+        ['pytest', 'pip'],
+        ['boto3', 'pip'],
+      ]
+      const dep =
+        popularDependencies[
+          Math.floor(Math.random() * popularDependencies.length)
+        ]
+      params.dependencyName = dep[0]
+      params.packageManager = dep[1]
+    }
+
     this.setState({ params })
 
     const apiUrl =
@@ -33,7 +64,7 @@ class CompatibilityScorePage extends React.Component {
 
     //const XXXapiUrl =
     //  'https://cors-anywhere.herokuapp.com/' + apiUrl.replace('https://', '')
-    //const response = await fetch(XXXapiUrl)
+    //fetch(XXXapiUrl)
     fetch(apiUrl)
       .then(response => {
         return response.json()
