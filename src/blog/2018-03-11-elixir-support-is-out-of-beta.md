@@ -23,6 +23,6 @@ Enjoy!
 PS. We couldn't have got here without the help [Steve Domin][steve] has given
 us. Thanks Steve!
 
-[release-post]: announcing-elixir-support
+[release-post]: ../announcing-elixir-support
 [feedback-link]: https://github.com/dependabot/feedback
 [steve]: https://twitter.com/stevedomin

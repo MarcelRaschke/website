@@ -20,6 +20,6 @@ Enjoy!
 
 [^1]: The issue we're aware of is that Dependabot ignores PHP platform requirements. If you're using PHP 7.0+ this should be fine, but Dependabot may generate PRs that are incompatible with PHP 5.6. There's an open issue with more details [here][platform-reqs-issue].
 
-[release-post]: dependabot-now-supports-php
+[release-post]: ../dependabot-now-supports-php
 [feedback-link]: https://github.com/dependabot/feedback
 [platform-reqs-issue]: https://github.com/dependabot/feedback/issues/70

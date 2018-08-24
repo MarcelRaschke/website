@@ -20,4 +20,4 @@ feedback.
 🤖
 
 [feedback-link]: https://github.com/dependabot/feedback
-[pipenv-support]: pipenv-beta
+[pipenv-support]: ../pipenv-beta

@@ -29,7 +29,7 @@ Stay safe out there!
 
 🕵️‍♀️
 
-[automatically-respond-to-security-advisories]: automatically-respond-to-security-advisories
+[automatically-respond-to-security-advisories]: ../automatically-respond-to-security-advisories
 [elixir-advisory-database]: https://github.com/dependabot/elixir-security-advisories
 [appcanary-acquired]: https://blog.appcanary.com/2018/goodbye.html
 [github-python-advisories]: https://blog.github.com/2018-07-12-security-vulnerability-alerts-for-python/

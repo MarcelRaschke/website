@@ -27,4 +27,4 @@ Stay safe out there!
 
 🍸
 
-[security-announcement]: automatically-respond-to-security-advisories
+[security-announcement]: ../automatically-respond-to-security-advisories

@@ -20,5 +20,5 @@ Enjoy!
 
 📦
 
-[release-post]: rust-support
+[release-post]: ../rust-support
 [feedback-link]: https://github.com/dependabot/feedback

@@ -36,4 +36,4 @@ early, and save everyone some time. That's a story for another day, though.
 
 ✌️
 
-[improving-resolution]: improving-dependency-resolution-in-bundler
+[improving-resolution]: ../improving-dependency-resolution-in-bundler

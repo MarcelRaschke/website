@@ -19,6 +19,6 @@ use Dependabot.
 
 As always, we'd love your [feedback][feedback].
 
-[vision_blog_post]: a-bigger-vision-for-dependency-management
+[vision_blog_post]: ../a-bigger-vision-for-dependency-management
 [compatibility_score_webpage]: https://dependabot.com/compatibility-score.html
 [feedback]: https://github.com/dependabot/feedback/issues

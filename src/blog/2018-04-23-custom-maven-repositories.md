@@ -18,4 +18,4 @@ too.
 🎉
 
 [get-in-touch]: mailto:support@dependabot.com
-[multimodule-projects]: multimodule-maven-files
+[multimodule-projects]: ../multimodule-maven-files

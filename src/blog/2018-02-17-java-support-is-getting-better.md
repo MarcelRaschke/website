@@ -36,5 +36,5 @@ Enjoy!
 
 🍸
 
-[release-post]: announcing-maven-support
+[release-post]: ../announcing-maven-support
 [feedback-link]: https://github.com/dependabot/feedback

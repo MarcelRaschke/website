@@ -24,4 +24,4 @@ To be clear, we know this would be insanely hard, but that's the fun part.
 
 A robot can dream, right?
 
-[vision_blog_post]: a-bigger-vision-for-dependency-management
+[vision_blog_post]: ../a-bigger-vision-for-dependency-management

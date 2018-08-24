@@ -53,7 +53,7 @@ Assuming _f(x) = K + g(x)_, where _K_ is the fixed cost of making any change (i.
 [rails-security-patch]: http://weblog.rubyonrails.org/2015/6/16/Rails-3-2-22-4-1-11-and-4-2-2-have-been-released-and-more/
 [2017-owasp]: https://www.owasp.org/index.php/Top_10_2017-A9-Using_Components_with_Known_Vulnerabilities
 [2013-owasp]: https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities
-[dependabot-security-analysis]: the-latest-dependency-version-is-probably-the-most-secure
+[dependabot-security-analysis]: ../the-latest-dependency-version-is-probably-the-most-secure
 [adequate-record]: https://tenderlovemaking.com/2014/02/19/adequaterecord-pro-like-activerecord.html
 [puma_changelog]: https://github.com/puma/puma/blob/master/History.md
 [plug_changelog]: https://github.com/elixir-lang/plug/blob/master/CHANGELOG.md

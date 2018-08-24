@@ -18,4 +18,4 @@ Enjoy!
 
 🍸
 
-[release-post]: dependabot-now-supports-npm
+[release-post]: ../dependabot-now-supports-npm

@@ -33,6 +33,6 @@ experience any issues, please don't hesitate to [let us know][feedback-link]!
 
 🍸
 
-[automerge-announcement]: automatic-pull-request-merging
+[automerge-announcement]: ../automatic-pull-request-merging
 [feedback-link]: https://github.com/dependabot/feedback
 [andy-twitter]: https://twitter.com/appltn/status/1009477555387183104

@@ -72,7 +72,7 @@ do to help is to use it! The service is free for open source projects and always
 will be.
 
 [moj-pr]: https://github.com/ministryofjustice/prison-visits-2/pull/871
-[security-post]: the-latest-dependency-version-is-probably-the-most-secure
+[security-post]: ../the-latest-dependency-version-is-probably-the-most-secure
 [semver]: http://semver.org/
 [google-rosie]: https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/pdf
 [facebook-codeshift]: https://github.com/facebook/jscodeshift

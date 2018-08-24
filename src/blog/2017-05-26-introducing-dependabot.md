@@ -26,7 +26,7 @@ Just click on one of the links below. The app is totally free for the first mont
 
 
 [dependabot-github-app]: https://github.com/apps/dependabot
-[dependabot-security-analysis]: the-latest-dependency-version-is-probably-the-most-secure
-[dependabot-why-bother]: why-bother
+[dependabot-security-analysis]: ../the-latest-dependency-version-is-probably-the-most-secure
+[dependabot-why-bother]: ../why-bother
 [bump-core]: https://github.com/gocardless/bump-core
 [dependabot]: https://dependabot.com

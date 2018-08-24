@@ -39,5 +39,5 @@ Stay safe out there!
 PS: Using another language? We announced the same functionality for
 Ruby, PHP, Elixir and Rust [last week][security-announcement].
 
-[security-announcement]: automatically-respond-to-security-advisories
+[security-announcement]: ../automatically-respond-to-security-advisories
 [node-security-wg]: https://github.com/nodejs/security-wg

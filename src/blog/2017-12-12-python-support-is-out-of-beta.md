@@ -18,5 +18,5 @@ Next up, we'll be working on [adding support for Pipenv][pipenv-support].
 
 🍸
 
-[release-post]: dependabot-now-supports-python
+[release-post]: ../dependabot-now-supports-python
 [pipenv-support]: https://github.com/dependabot/dependabot-core/pull/15

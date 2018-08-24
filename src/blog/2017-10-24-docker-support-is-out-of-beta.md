@@ -11,4 +11,4 @@ We're always improving Dependabot across all our languages, but now that
 it can handle Dockerfiles that specify a digest and/or use a private registry
 we think it's ready for you to rely on. Enjoy!
 
-[release-post]: dependabot-now-supports-docker
+[release-post]: ../dependabot-now-supports-docker
