@@ -27,7 +27,7 @@ export default ({ data }) => {
             Dependabot helps keep your dependencies up-to-date. It's free for
             personal accounts and open source, and always will be.
           </p>
-          <a className="button primary" href="//dependabot.com">
+          <a className="button primary" href="/">
             Find out more
           </a>
           <a className="button" href="//app.dependabot.com/auth/sign-up">
