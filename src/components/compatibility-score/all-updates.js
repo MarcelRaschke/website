@@ -7,7 +7,7 @@ class AllUpdates extends React.Component {
   state = { updatesToShow: 3 }
 
   render() {
-    const { dependencyName, data } = this.props
+    const { dependencyName } = this.props
 
     return (
       <Header>
@@ -27,7 +27,7 @@ class AllUpdates extends React.Component {
   }
 
   compatibilityBoxes() {
-    const { dependencyName, packageManager, newVersion, data } = this.props
+    const { dependencyName, packageManager, data } = this.props
 
     if (!data) {
       return <p>Loading...</p>

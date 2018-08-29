@@ -88,7 +88,7 @@ function compatibilityBadgeUrl(
   }
 
   const query = queryString.stringify(params)
-  return `https://api.dependabot.com/badges/compatibility_score?${query}`
+  return `${process.env.API_URL}/badges/compatibility_score?${query}`
 }
 
 function compatibilityScoreUrl(
