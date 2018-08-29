@@ -155,8 +155,8 @@ const IndexPage = () => (
                 <h3>Security advisories handled automatically</h3>
                 <p>
                   Dependabot monitors security advisories for Ruby, Python,
-                  JavaScript, PHP, Elixir and Rust. We create PRs immediately in
-                  response to new advisories.
+                  JavaScript, Java, .NET, PHP, Elixir and Rust. We create PRs
+                  immediately in response to new advisories.
                 </p>
               </div>
             </div>
