@@ -58,7 +58,7 @@ const FailedPullRequests = ({data}) => (
         The following updates failed CI and contributed to the score.
       </p>
 
-      <table className="table" style={{ minWidth: 420 }}>
+      <table className="table">
         <thead>
           <tr>
             <th>Name</th>
