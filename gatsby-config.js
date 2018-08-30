@@ -1,6 +1,20 @@
+const proxy = require('http-proxy-middleware');
+
 module.exports = {
   siteMetadata: {
     title: 'Dependabot',
+  },
+  developMiddleware: app => {
+    app.use(
+      "/api/",
+      proxy({
+        target: "https://api.dependabot.com",
+        changeOrigin: true,
+        pathRewrite: {
+          "^/api/": "/",
+        },
+      })
+    );
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -30,6 +44,12 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`source sans pro\:200,300,400,600,700`],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        babel: false,
       },
     },
   ],

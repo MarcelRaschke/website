@@ -5,7 +5,7 @@ import Score from './score'
 
 class SpecificUpdate extends React.Component {
   render() {
-    const { dependencyName, previousVersion, newVersion, data } = this.props
+    const { dependencyName, previousVersion, newVersion } = this.props
     return (
       <Header>
         <div className="section compatibility-score-container">

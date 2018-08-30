@@ -5,11 +5,12 @@ import Footer from '../components/footer'
 import SpecificUpdate from '../components/compatibility-score/specific-update'
 import SpecificTarget from '../components/compatibility-score/specific-target'
 import AllUpdates from '../components/compatibility-score/all-updates'
+import FailedPullRequests from '../components/compatibility-score/failed-pull-requests'
 import HowItWorks from '../components/compatibility-score/how-it-works'
 import dependabotLogo from '../images/dependabot-logo-square.svg'
 
 class CompatibilityScorePage extends React.Component {
-  state = { params: {}, data: null }
+  state = { params: {}, compatibilityScores: null, failedPullRequests: null }
 
   componentDidMount() {
     const { location } = this.props
@@ -54,30 +55,66 @@ class CompatibilityScorePage extends React.Component {
 
     this.setState({ params })
 
-    const apiUrl =
-      'https://api.dependabot.com/compatibility_scores?' +
-      queryString.stringify({
-        'dependency-name': params.dependencyName,
-        'package-manager': params.packageManager,
-        'version-scheme': 'semver',
-      })
+    this.fetchCompatibilityScores(params);
 
-    //const XXXapiUrl =
-    //  'https://cors-anywhere.herokuapp.com/' + apiUrl.replace('https://', '')
-    //fetch(XXXapiUrl)
-    fetch(apiUrl)
-      .then(response => {
+    if (params.newVersion) {
+      this.fetchFailingPullRequests(params);
+    }
+  }
+
+  fetchCompatibilityScores(params) {
+    const query = queryString.stringify({
+      'dependency-name': params.dependencyName,
+      'package-manager': params.packageManager,
+      'version-scheme': 'semver',
+    })
+
+    const apiUlr = `${process.env.API_URL}/compatibility_scores?${query}`
+
+    fetch(apiUlr)
+      .then((response) => {
         return response.json()
       })
-      .then(data => {
-        this.setState({ data })
+      .then((data) => {
+        this.setState({ compatibilityScores: data })
+      })
+  }
+
+  fetchFailingPullRequests(params) {
+    const failingPullRequestParams = {
+      'dependency-name': params.dependencyName,
+      'package-manager': params.packageManager,
+      'target-version': params.newVersion,
+    };
+
+    if (params.previousVersion) {
+      failingPullRequestParams['previous-version'] = params.previousVersion;
+    } else {
+      failingPullRequestParams['version-scheme'] = 'semver'
+    }
+
+    const query = queryString.stringify(failingPullRequestParams)
+    const apiUrl = `${process.env.API_URL}/failing_pull_requests?${query}`
+
+    fetch(apiUrl)
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        this.setState({ failedPullRequests: data })
       })
   }
 
   render() {
+    const { params, failedPullRequests } = this.state
+
     return (
       <div className="main-background">
         {this.mainSection()}
+        {
+          failedPullRequests && failedPullRequests.data && failedPullRequests.data.length ?
+            (<FailedPullRequests {...params} data={failedPullRequests} />) : null
+        }
         <HowItWorks />
         <Footer />
       </div>
@@ -85,17 +122,17 @@ class CompatibilityScorePage extends React.Component {
   }
 
   mainSection() {
-    const { params, data } = this.state
+    const { params, compatibilityScores } = this.state
 
     if (params.previousVersion && params.newVersion) {
-      return <SpecificUpdate {...params} data={data} />
+      return <SpecificUpdate {...params} data={compatibilityScores} />
     }
 
     if (params.newVersion) {
-      return <SpecificTarget {...params} data={data} />
+      return <SpecificTarget {...params} data={compatibilityScores} />
     }
 
-    return <AllUpdates {...params} data={data} />
+    return <AllUpdates {...params} data={compatibilityScores} />
   }
 }
 
