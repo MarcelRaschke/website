@@ -15,7 +15,7 @@
     "gatsby-remark-static-images": "^1.0.0",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
-    "http-proxy-middleware": "^0.18.0",
+    "http-proxy-middleware": "^0.19.0",
     "normalize.css": "^8.0.0",
     "query-string": "^5.0.0",
     "react-helmet": "^5.2.0"
