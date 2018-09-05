@@ -7,12 +7,12 @@ import customerMojLogo from '../images/customer-moj.svg'
 import customerThoughbotLogo from '../images/customer-thoughtbot.svg'
 import customerFundingCircleLogo from '../images/customer-funding-circle.svg'
 import customerOptimizelyLogo from '../images/customer-optimizely.svg'
-import customerZurbLogo from '../images/customer-zurb.svg'
 import customerRubyTogetherLogo from '../images/customer-ruby-together.svg'
 import customerGoCardlessLogo from '../images/customer-gocardless.svg'
 import customerCheckrLogo from '../images/customer-checkr.svg'
 import customerGithubLogo from '../images/customer-github.svg'
 import customerGitPrimeLogo from '../images/customer-gitprime.svg'
+import customerWeworkLogo from '../images/customer-wework.svg'
 import customerWireLogo from '../images/customer-wire.svg'
 import iconRuby from '../images/icon-ruby.svg'
 import iconJs from '../images/icon-js.svg'
@@ -420,8 +420,8 @@ const IndexPage = () => (
               </a>
             </div>
             <div className="customer-logo">
-              <a href="https://zurb.com/">
-                <img src={customerZurbLogo} />
+              <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Awework">
+                <img src={customerWeworkLogo} />
               </a>
             </div>
             <div className="customer-logo">
