@@ -70,6 +70,14 @@ export default class Nav extends React.Component {
               <a className="nav-item" href="/blog">
                 Blog
               </a>
+              <div className="small-screen-only">
+                <hr />
+                <a
+                  className="nav-item"
+                  href="//app.dependabot.com/auth/sign-in?immediate=true">
+                  Log in
+                </a>
+              </div>
             </div>
           </div>
         </div>
