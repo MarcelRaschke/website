@@ -61,7 +61,7 @@ const IndexPage = () => (
             </a>
           </p>
           <p>
-            Over <strong>160,000 pull requests merged</strong>, and counting!
+            Over <strong>170,000 pull requests merged</strong>, and counting!
           </p>
         </div>
       </Header>
@@ -457,7 +457,7 @@ const IndexPage = () => (
           </div>
           <p>
             ... plus <span id="active-accounts">2,000</span> more, who have
-            merged over <span id="merged-prs">160,000</span> Dependabot pull
+            merged over <span id="merged-prs">170,000</span> Dependabot pull
             requests.
           </p>
         </div>
