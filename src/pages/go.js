@@ -27,30 +27,29 @@ const GoPage = () => (
           <a name="features" />
           <h2>Features</h2>
           <p>
-            Go is one of Dependabot's newest languages and{' '}
-            <strong>we currently only support dep</strong>.<br />
-            Alongside Dependabot's <a href="/#features">core features</a> we
-            already have support for:
+            Go is one of Dependabot's newest languages and is currently in
+            alpha. Alongside Dependabot's <a href="/#features">core features</a>
+            we already have support for:
           </p>
           <div className="feature-boxes">
             <div className="feature-box">
               <div className="feature-description">
-                <h3>Version conflicts taken care of</h3>
+                <h3>Support for go.mod and dep</h3>
                 <p>
-                  Dependabot considers resolvability when determining available
-                  version updates. Dependabot PRs will always resolve for your
-                  Gopkg.toml.
+                  Dependabot will determine whether you're using go modules or
+                  dep and update your dependency files accordingly. It can even
+                  handle projects using both.
                 </p>
               </div>
             </div>
 
             <div className="feature-box">
               <div className="feature-description">
-                <h3>Gopkg.toml requirement updates</h3>
+                <h3>Version conflicts taken care of</h3>
                 <p>
-                  Dependabot will propose updates to your Gopkg.toml, as well as
-                  your Gopkg.lock. Alternatively, you can set Dependabot to only
-                  make lockfile updates.
+                  Dependabot considers resolvability when determining available
+                  version updates. If you're using dep, Dependabot PRs will
+                  always resolve for your Gopkg.toml.
                 </p>
               </div>
             </div>

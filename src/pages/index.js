@@ -380,7 +380,7 @@ class IndexPage extends React.Component {
                           <img src={iconGo} />
                         </div>
                         <div className="language-caveat">ALPHA</div>
-                        <div className="language-name">Go - dep</div>
+                        <div className="language-name">Go</div>
                       </div>
                     </a>
                   </div>
