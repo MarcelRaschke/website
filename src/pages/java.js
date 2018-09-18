@@ -37,7 +37,7 @@ const JavaPage = () => (
               <div className="feature-description">
                 <h3>Support for Maven and Gradle</h3>
                 <p>
-                  Dependabot can update `pom.xml` and `build.gradle` files.
+                  Dependabot can update pom.xml and build.gradle files.
                   Support for sbt is planned - if you'd like to be a beta tester
                   for it please <a href="https://github.com/dependabot/dependabot-core/issues/352">let use know</a>.
                 </p>
