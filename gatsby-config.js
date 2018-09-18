@@ -2,7 +2,8 @@ const proxy = require("http-proxy-middleware");
 
 module.exports = {
   siteMetadata: {
-    title: "Dependabot"
+    title: "Dependabot",
+    siteUrl: `https://dependabot.com`
   },
   developMiddleware: app => {
     app.use(
@@ -25,6 +26,56 @@ module.exports = {
         name: "blog",
         path: `${__dirname}/src/blog`
       }
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/blog/rss.xml",
+          },
+        ],
+      },
     },
     {
       resolve: "gatsby-transformer-remark",
