@@ -35,11 +35,33 @@ const JavaPage = () => (
           <div className="feature-boxes">
             <div className="feature-box">
               <div className="feature-description">
-                <h3>Support for custom repositories</h3>
+                <h3>Support for Maven and Gradle</h3>
                 <p>
-                  Dependabot can handle custom repository sources, as well as
-                  The Central Repository. If you have a private repository you
-                  need support for let us know.
+                  Dependabot can update `pom.xml` and `build.gradle` files.
+                  Support for sbt is planned - if you'd like to be a beta tester
+                  for it please <a href="https://github.com/dependabot/dependabot-core/issues/352">let use know</a>.
+                </p>
+              </div>
+            </div>
+
+            <div className="feature-box">
+              <div className="feature-description">
+                <h3>Multi-project support</h3>
+                <p>
+                  Dependabot will automatically scan your dependency files for
+                  any subprojects, and create pull requests to keep the
+                  dependencies of these sub-projects up-to-date.
+                </p>
+              </div>
+            </div>
+
+            <div className="feature-box">
+              <div className="feature-description">
+                <h3>Custom repository support</h3>
+                <p>
+                  Dependabot can handle custom repository sources, and will
+                  search your dependency files for any repository declarations.
+                  Private repositories can also be specified in your dashboard.
                 </p>
               </div>
             </div>

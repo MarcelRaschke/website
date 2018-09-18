@@ -384,7 +384,7 @@ class IndexPage extends React.Component {
                         <div className="language-icon">
                           <img src={iconGradle} />
                         </div>
-                        <div className="language-caveat">ALPHA</div>
+                        <div className="language-caveat">BETA</div>
                         <div className="language-name">Java - Gradle</div>
                       </div>
                     </a>
