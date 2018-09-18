@@ -1,6 +1,6 @@
 import React from 'react'
 import { takeRight, reverse } from 'lodash'
-import Header from '../../layouts/header'
+import Header from '../../components/header'
 import Score from './score'
 
 class AllUpdates extends React.Component {

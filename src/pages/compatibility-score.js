@@ -1,6 +1,7 @@
+import { Link } from 'gatsby'
 import React from 'react'
-import Link from 'gatsby-link'
 import queryString from 'query-string'
+import Layout from '../components/layout'
 import Footer from '../components/footer'
 import SpecificUpdate from '../components/compatibility-score/specific-update'
 import SpecificTarget from '../components/compatibility-score/specific-target'
@@ -55,10 +56,10 @@ class CompatibilityScorePage extends React.Component {
 
     this.setState({ params })
 
-    this.fetchCompatibilityScores(params);
+    this.fetchCompatibilityScores(params)
 
     if (params.newVersion) {
-      this.fetchFailingPullRequests(params);
+      this.fetchFailingPullRequests(params)
     }
   }
 
@@ -72,10 +73,10 @@ class CompatibilityScorePage extends React.Component {
     const apiUlr = `${process.env.API_URL}/compatibility_scores?${query}`
 
     fetch(apiUlr)
-      .then((response) => {
+      .then(response => {
         return response.json()
       })
-      .then((data) => {
+      .then(data => {
         this.setState({ compatibilityScores: data })
       })
   }
@@ -85,10 +86,10 @@ class CompatibilityScorePage extends React.Component {
       'dependency-name': params.dependencyName,
       'package-manager': params.packageManager,
       'target-version': params.newVersion,
-    };
+    }
 
     if (params.previousVersion) {
-      failingPullRequestParams['previous-version'] = params.previousVersion;
+      failingPullRequestParams['previous-version'] = params.previousVersion
     } else {
       failingPullRequestParams['version-scheme'] = 'semver'
     }
@@ -97,10 +98,10 @@ class CompatibilityScorePage extends React.Component {
     const apiUrl = `${process.env.API_URL}/failing_pull_requests?${query}`
 
     fetch(apiUrl)
-      .then((response) => {
+      .then(response => {
         return response.json()
       })
-      .then((data) => {
+      .then(data => {
         this.setState({ failedPullRequests: data })
       })
   }
@@ -109,15 +110,18 @@ class CompatibilityScorePage extends React.Component {
     const { params, failedPullRequests } = this.state
 
     return (
-      <div className="main-background">
-        {this.mainSection()}
-        {
-          failedPullRequests && failedPullRequests.data && failedPullRequests.data.length ?
-            (<FailedPullRequests {...params} data={failedPullRequests} />) : null
-        }
-        <HowItWorks />
-        <Footer />
-      </div>
+      <Layout>
+        <div className="main-background">
+          {this.mainSection()}
+          {failedPullRequests &&
+          failedPullRequests.data &&
+          failedPullRequests.data.length ? (
+            <FailedPullRequests {...params} data={failedPullRequests} />
+          ) : null}
+          <HowItWorks />
+          <Footer />
+        </div>
+      </Layout>
     )
   }
 

@@ -1,12 +1,12 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import { format as formatDate } from 'date-fns'
-import Blog from '../layouts/blog'
+import BlogLayout from '../components/blog-layout'
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  console.log(data)
   return (
-    <Blog>
+    <BlogLayout>
       <article>
         <header>
           <h2>{post.frontmatter.title}</h2>
@@ -35,7 +35,7 @@ export default ({ data }) => {
           </a>
         </div>
       </article>
-    </Blog>
+    </BlogLayout>
   )
 }
 

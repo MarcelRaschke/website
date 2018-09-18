@@ -1,5 +1,5 @@
+import { Link } from "gatsby";
 import React from 'react'
-import Link from 'gatsby-link'
 import logo from '../images/dependabot-logo-full.svg'
 
 export default class Nav extends React.Component {

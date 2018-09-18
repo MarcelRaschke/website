@@ -1,6 +1,6 @@
 import React from 'react'
 import { find } from 'lodash'
-import Header from '../../layouts/header'
+import Header from '../../components/header'
 import Score from './score'
 
 class SpecificTarget extends React.Component {
@@ -61,7 +61,7 @@ class SpecificTarget extends React.Component {
 
   blurb() {
     const { dependencyName, newVersion, data } = this.props
-    const update = _.find(data.semver_updates, { updated_version: newVersion })
+    const update = find(data.semver_updates, { updated_version: newVersion })
 
     if (!update || update.candidate_updates < 5) {
       return (

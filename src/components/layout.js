@@ -2,12 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from './header'
 import 'normalize.css'
 import '../scss/main.scss'
 import favicon from '../images/favicon.ico'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <div>
     <Helmet
       title="Dependabot"
@@ -24,7 +23,7 @@ const Layout = ({ children, data }) => (
       ]}
       link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
-    {children()}
+    {children}
   </div>
 )
 

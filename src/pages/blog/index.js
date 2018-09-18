@@ -1,7 +1,7 @@
+import { Link, graphql } from 'gatsby'
 import React from 'react'
 import { format as formatDate } from 'date-fns'
-import Link from 'gatsby-link'
-import Blog from '../../layouts/blog'
+import BlogLayout from '../../components/blog-layout'
 
 const slugifyPath = path => path.match(/\d{4}-\d{2}-\d{2}-(.*).md/)[1]
 const postUrl = post => '/blog' + post.fields.slug
@@ -29,10 +29,10 @@ const BlogIndex = ({ data }) => {
     <PostPreview key={post.node.id} post={post.node} />
   ))
   return (
-    <Blog>
+    <BlogLayout>
       <h2>Blog</h2>
       <div className="blog-preview-list">{posts}</div>
-    </Blog>
+    </BlogLayout>
   )
 }
 

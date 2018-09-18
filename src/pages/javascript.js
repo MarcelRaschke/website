@@ -1,12 +1,13 @@
+import { Link } from 'gatsby'
 import React from 'react'
-import Link from 'gatsby-link'
-import Header from '../layouts/header'
+import Layout from '../components/layout'
+import Header from '../components/header'
 import Footer from '../components/footer'
 import dependabotLogo from '../images/dependabot-logo-square.svg'
 import iconJavascript from '../images/icon-js.svg'
 
 const JavascriptPage = () => (
-  <div>
+  <Layout>
     <div className="main-background">
       <Header>
         <div className="section hero">
@@ -78,7 +79,7 @@ const JavascriptPage = () => (
     </div>
 
     <Footer />
-  </div>
+  </Layout>
 )
 
 export default JavascriptPage

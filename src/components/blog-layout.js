@@ -1,9 +1,10 @@
-import React from 'react'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-full.svg'
-import '../scss/blog.scss'
+import React from "react";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-full.svg";
+import "../scss/main.scss";
+import "../scss/blog.scss";
 
-const Blog = ({ children, data }) => (
+const BlogLayout = ({ children, data }) => (
   <div className="blog">
     <div className="container">
       <nav className="nav">
@@ -29,6 +30,6 @@ const Blog = ({ children, data }) => (
     </div>
     <Footer />
   </div>
-)
+);
 
-export default Blog
+export default BlogLayout;

@@ -1,6 +1,7 @@
 import React from 'react'
-import CountUp from 'react-countup';
-import Header from '../layouts/header'
+import CountUp from 'react-countup'
+import Layout from '../components/layout'
+import Header from '../components/header'
 import Footer from '../components/footer'
 import customerPlatedLogo from '../images/customer-plated.svg'
 import customerMojLogo from '../images/customer-moj.svg'
@@ -39,10 +40,10 @@ import iconOpenPrs from '../images/icon-open-prs.svg'
 import iconReviewAndMerge from '../images/icon-review-and-merge.svg'
 import screenshot from '../images/screenshot.png'
 
-const initialMergedPrsCount = 170000;
-const initialActiveAccountsCount = 2000;
-const initialAccountsMergingPrsCount = 1000;
-const promoCompaniesCount = 12;
+const initialMergedPrsCount = 170000
+const initialActiveAccountsCount = 2000
+const initialAccountsMergingPrsCount = 1000
+const promoCompaniesCount = 12
 
 class IndexPage extends React.Component {
   state = {
@@ -54,43 +55,58 @@ class IndexPage extends React.Component {
   componentDidMount() {
     // Only fetch in the browser not when building the site
     if ('fetch' in window) {
-      fetch(`${process.env.API_URL}/stats`).then((response) => response.json())
-        .then((json) => {
-          const { active_accounts_count, merged_pull_requests_count, accounts_merging_prs_count } = json;
+      fetch(`${process.env.API_URL}/stats`)
+        .then(response => response.json())
+        .then(json => {
+          const {
+            active_accounts_count,
+            merged_pull_requests_count,
+            accounts_merging_prs_count,
+          } = json
 
-          const mergedPrsCount = merged_pull_requests_count ?
-            merged_pull_requests_count : initialMergedPrsCount;
-          const activeAccountsCount = active_accounts_count ?
-            (active_accounts_count - promoCompaniesCount) : initialActiveAccountsCount;
-          const accountsMergingPrsCount = accounts_merging_prs_count ?
-            accounts_merging_prs_count : initialAccountsMergingPrsCount;
+          const mergedPrsCount = merged_pull_requests_count
+            ? merged_pull_requests_count
+            : initialMergedPrsCount
+          const activeAccountsCount = active_accounts_count
+            ? active_accounts_count - promoCompaniesCount
+            : initialActiveAccountsCount
+          const accountsMergingPrsCount = accounts_merging_prs_count
+            ? accounts_merging_prs_count
+            : initialAccountsMergingPrsCount
 
-          this.setState({ mergedPrsCount, activeAccountsCount, accountsMergingPrsCount })
-        });
+          this.setState({
+            mergedPrsCount,
+            activeAccountsCount,
+            accountsMergingPrsCount,
+          })
+        })
     }
   }
 
-  formatNumber = (number) => {
+  formatNumber = number => {
     if (typeof Intl !== 'undefined') {
-      return Intl.NumberFormat().format(number);
+      return Intl.NumberFormat().format(number)
     } else {
-      return number;
+      return number
     }
   }
 
   render() {
-    const { mergedPrsCount, activeAccountsCount, accountsMergingPrsCount } = this.state;
+    const {
+      mergedPrsCount,
+      activeAccountsCount,
+      accountsMergingPrsCount,
+    } = this.state
 
     return (
-      <div>
+      <Layout>
         <div className="main-background">
           <Header>
             <div className="section hero">
-
               <h2>Automated dependency updates</h2>
               <p>
-                Dependabot creates pull requests to keep your dependencies secure
-                and up-to-date.
+                Dependabot creates pull requests to keep your dependencies
+                secure and up-to-date.
               </p>
               <p>
                 <a
@@ -105,9 +121,17 @@ class IndexPage extends React.Component {
               </p>
               <p>
                 <strong>
-                  <CountUp start={initialMergedPrsCount} end={this.state.mergedPrsCount} formattingFn={this.formatNumber} duration={3} />
+                  <CountUp
+                    start={initialMergedPrsCount}
+                    end={this.state.mergedPrsCount}
+                    formattingFn={this.formatNumber}
+                    duration={3}
+                  />
                 </strong>
-                <span><strong> pull requests merged</strong></span>, and counting!
+                <span>
+                  <strong> pull requests merged</strong>
+                </span>
+                , and counting!
               </p>
             </div>
           </Header>
@@ -127,8 +151,8 @@ class IndexPage extends React.Component {
                       <div className="how-it-works-description">
                         <h3>Dependabot checks for updates</h3>
                         <p>
-                          Dependabot pulls down your dependency files and looks for
-                          any outdated or insecure requirements.
+                          Dependabot pulls down your dependency files and looks
+                          for any outdated or insecure requirements.
                         </p>
                       </div>
                     </div>
@@ -140,8 +164,9 @@ class IndexPage extends React.Component {
                       <div className="how-it-works-description">
                         <h3>Dependabot opens pull requests</h3>
                         <p>
-                          If any of your dependencies are out-of-date, Dependabot
-                          opens individual pull requests to update each one.
+                          If any of your dependencies are out-of-date,
+                          Dependabot opens individual pull requests to update
+                          each one.
                         </p>
                       </div>
                     </div>
@@ -186,9 +211,10 @@ class IndexPage extends React.Component {
                   <div className="feature-description">
                     <h3>Simple, drip-feed getting started flow</h3>
                     <p>
-                      We'll update five of your dependencies each day, until you're
-                      on the cutting edge. Request more PRs if you want, or close
-                      them to ignore a dependency until the next release.
+                      We'll update five of your dependencies each day, until
+                      you're on the cutting edge. Request more PRs if you want,
+                      or close them to ignore a dependency until the next
+                      release.
                     </p>
                   </div>
                 </div>
@@ -201,8 +227,8 @@ class IndexPage extends React.Component {
                     <h3>Security advisories handled automatically</h3>
                     <p>
                       Dependabot monitors security advisories for Ruby, Python,
-                      JavaScript, Java, .NET, PHP, Elixir and Rust. We create PRs
-                      immediately in response to new advisories.
+                      JavaScript, Java, .NET, PHP, Elixir and Rust. We create
+                      PRs immediately in response to new advisories.
                     </p>
                   </div>
                 </div>
@@ -214,9 +240,10 @@ class IndexPage extends React.Component {
                   <div className="feature-description">
                     <h3>Great pull requests that stay up-to-date</h3>
                     <p>
-                      Dependabot PRs include release notes, changelogs, commit links
-                      and vulnerability details whenever they're available. They'll
-                      also automatically keep themselves conflict-free.
+                      Dependabot PRs include release notes, changelogs, commit
+                      links and vulnerability details whenever they're
+                      available. They'll also automatically keep themselves
+                      conflict-free.
                     </p>
                   </div>
                 </div>
@@ -229,8 +256,8 @@ class IndexPage extends React.Component {
                     <h3>Compatibility scores for each update</h3>
                     <p>
                       Dependabot aggregates everyone's test results into a
-                      compatibility score, so you can be certain a dependency update
-                      is backwards compatible and bug-free.
+                      compatibility score, so you can be certain a dependency
+                      update is backwards compatible and bug-free.
                     </p>
                   </div>
                 </div>
@@ -256,9 +283,9 @@ class IndexPage extends React.Component {
                   <div className="feature-description">
                     <h3>Live, daily, weekly or monthly updates</h3>
                     <p>
-                      Choose to receive update PRs live, daily, weekly or monthly.
-                      We make an exception for security patches, which you'll always
-                      receive immediately.
+                      Choose to receive update PRs live, daily, weekly or
+                      monthly. We make an exception for security patches, which
+                      you'll always receive immediately.
                     </p>
                   </div>
                 </div>
@@ -502,13 +529,25 @@ class IndexPage extends React.Component {
                 </div>
               </div>
               <p>
-                ... plus <span id="active-accounts">
-                  <CountUp start={initialActiveAccountsCount} end={this.state.activeAccountsCount} formattingFn={this.formatNumber} duration={3} />
-                </span> more, who have
-                merged <span id="merged-prs">
-                  <CountUp start={initialMergedPrsCount} end={this.state.mergedPrsCount} formattingFn={this.formatNumber} duration={3} />
-                </span> Dependabot pull
-                requests.
+                ... plus{' '}
+                <span id="active-accounts">
+                  <CountUp
+                    start={initialActiveAccountsCount}
+                    end={this.state.activeAccountsCount}
+                    formattingFn={this.formatNumber}
+                    duration={3}
+                  />
+                </span>{' '}
+                more, who have merged{' '}
+                <span id="merged-prs">
+                  <CountUp
+                    start={initialMergedPrsCount}
+                    end={this.state.mergedPrsCount}
+                    formattingFn={this.formatNumber}
+                    duration={3}
+                  />
+                </span>{' '}
+                Dependabot pull requests.
               </p>
             </div>
           </div>
@@ -555,7 +594,9 @@ class IndexPage extends React.Component {
                       <div className="plan-name">
                         <h3>Unlimited</h3>
                       </div>
-                      <p>Unlimited private projects on an organization account</p>
+                      <p>
+                        Unlimited private projects on an organization account
+                      </p>
                     </div>
                     <div className="price">
                       $50 <span className="month">per month</span>
@@ -575,8 +616,8 @@ class IndexPage extends React.Component {
             <div className="section get-started">
               <h2>Get started</h2>
               <p>
-                Dependabot is a GitHub integration, so you can try it on a single
-                repository.
+                Dependabot is a GitHub integration, so you can try it on a
+                single repository.
                 <br />
                 Set up takes less than a minute.
               </p>
@@ -591,7 +632,7 @@ class IndexPage extends React.Component {
         </div>
 
         <Footer />
-      </div>
+      </Layout>
     )
   }
 }

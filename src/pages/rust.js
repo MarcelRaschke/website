@@ -1,12 +1,13 @@
+import { Link } from 'gatsby'
 import React from 'react'
-import Link from 'gatsby-link'
-import Header from '../layouts/header'
+import Layout from '../components/layout'
+import Header from '../components/header'
 import Footer from '../components/footer'
 import dependabotLogo from '../images/dependabot-logo-square.svg'
 import iconRust from '../images/icon-rust.svg'
 
 const RustPage = () => (
-  <div>
+  <Layout>
     <div className="main-background">
       <Header>
         <div className="section hero">
@@ -81,7 +82,7 @@ const RustPage = () => (
     </div>
 
     <Footer />
-  </div>
+  </Layout>
 )
 
 export default RustPage
