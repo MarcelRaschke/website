@@ -1,13 +1,13 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
-import iconSubmodules from '../images/icon-git.svg'
-import iconOpenPrs from '../images/icon-open-prs.svg'
-import iconCheckForUpdates from '../images/icon-check-for-updates.svg'
-import iconReviewAndMerge from '../images/icon-review-and-merge.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
+import iconSubmodules from "../images/icon-git.svg";
+import iconOpenPrs from "../images/icon-open-prs.svg";
+import iconCheckForUpdates from "../images/icon-check-for-updates.svg";
+import iconReviewAndMerge from "../images/icon-review-and-merge.svg";
 
 const SubmodulesPage = () => (
   <Layout>
@@ -111,6 +111,6 @@ const SubmodulesPage = () => (
 
     <Footer />
   </Layout>
-)
+);
 
-export default SubmodulesPage
+export default SubmodulesPage;

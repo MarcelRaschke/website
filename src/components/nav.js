@@ -1,31 +1,31 @@
 import { Link } from "gatsby";
-import React from 'react'
-import logo from '../images/dependabot-logo-full.svg'
+import React from "react";
+import logo from "../images/dependabot-logo-full.svg";
 
 export default class Nav extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { navMenuOpen: false }
+    super(props);
+    this.state = { navMenuOpen: false };
   }
 
   navToggle() {
     this.setState(prevState => ({
-      navMenuOpen: !prevState.navMenuOpen,
-    }))
+      navMenuOpen: !prevState.navMenuOpen
+    }));
   }
 
   hideNav() {
-    this.setState({ navMenuOpen: false })
+    this.setState({ navMenuOpen: false });
   }
 
   render() {
-    const navClasses = ['nav']
+    const navClasses = ["nav"];
     if (this.state.navMenuOpen) {
-      navClasses.push('menu-open')
+      navClasses.push("menu-open");
     }
 
     return (
-      <nav className={navClasses.join(' ')}>
+      <nav className={navClasses.join(" ")}>
         <div className="nav-left">
           <a className="nav-item" href="/">
             <img className="nav-logo" src={logo} alt="Dependabot" />
@@ -74,7 +74,8 @@ export default class Nav extends React.Component {
                 <hr />
                 <a
                   className="nav-item"
-                  href="//app.dependabot.com/auth/sign-in?immediate=true">
+                  href="//app.dependabot.com/auth/sign-in?immediate=true"
+                >
                   Log in
                 </a>
               </div>
@@ -103,6 +104,6 @@ export default class Nav extends React.Component {
           </a>
         </div>
       </nav>
-    )
+    );
   }
 }

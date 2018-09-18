@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
-import React from 'react'
-import Nav from '../components/nav'
+import React from "react";
+import Nav from "../components/nav";
 
 const Footer = () => (
   <div className="container">
@@ -15,6 +15,6 @@ const Footer = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Footer
+export default Footer;

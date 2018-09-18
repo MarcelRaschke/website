@@ -1,10 +1,10 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
-import iconJava from '../images/icon-java.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
+import iconJava from "../images/icon-java.svg";
 
 const JavaPage = () => (
   <Layout>
@@ -29,7 +29,7 @@ const JavaPage = () => (
           <h2>Features</h2>
           <p>
             Java is one of Dependabot's newest languages. We're still rapidly
-            improving it, but alongside Dependabot's{' '}
+            improving it, but alongside Dependabot's{" "}
             <a href="/#features">core features</a> it already has:
           </p>
           <div className="feature-boxes">
@@ -83,6 +83,6 @@ const JavaPage = () => (
 
     <Footer />
   </Layout>
-)
+);
 
-export default JavaPage
+export default JavaPage;

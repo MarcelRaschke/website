@@ -1,7 +1,7 @@
-import React from 'react'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const TermsPage = () => (
   <Layout>
@@ -54,7 +54,7 @@ const TermsPage = () => (
         </p>
         <h3>Concluding of the Agreement</h3>
         <p>
-          Using Dependabot requires the opening of an Account at{' '}
+          Using Dependabot requires the opening of an Account at{" "}
           <a href="https://dependabot.com">https://dependabot.com</a> by using
           the customer’s GitHub Sign-In. Dependabot will conclude Agreements on
           the use of Dependabot only with GitHub users.
@@ -98,7 +98,7 @@ const TermsPage = () => (
         <h3>Obligations of the customer</h3>
         <p>
           If you choose a paid plan, you agree to pay us fees. Details of those
-          fees are set out in the pricing section at{' '}
+          fees are set out in the pricing section at{" "}
           <a href="https://dependabot.com">https://dependabot.com</a>. Our fees
           will be collected automatically as part of your payments to GitHub for
           their marketplace services.
@@ -279,7 +279,7 @@ const TermsPage = () => (
           email-address you provide.
         </p>
         <p>
-          Notices to Dependabot must be directed to{' '}
+          Notices to Dependabot must be directed to{" "}
           <a href="mailto:support@dependabot.com">support@dependabot.com</a>.
         </p>
 
@@ -317,6 +317,6 @@ const TermsPage = () => (
 
     <Footer />
   </Layout>
-)
+);
 
-export default TermsPage
+export default TermsPage;

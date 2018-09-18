@@ -1,55 +1,74 @@
-import React from 'react'
-import { ReactComponent as IconGitMerge } from '../../images/git-merge.svg'
-import { ReactComponent as IconGitPullRequest } from '../../images/git-pull-request.svg'
-import { ReactComponent as IconRepoForked } from '../../images/repo-forked.svg'
+import React from "react";
+import { ReactComponent as IconGitMerge } from "../../images/git-merge.svg";
+import { ReactComponent as IconGitPullRequest } from "../../images/git-pull-request.svg";
+import { ReactComponent as IconRepoForked } from "../../images/repo-forked.svg";
 
-const TableRow = ({attributes}) => (
+const TableRow = ({ attributes }) => (
   <tr>
     <td>
-      <a href={attributes['github-url']}>
-        { attributes['repo-name'] }
-      </a>
-      { attributes['forked'] && (<span style={{
-        marginLeft: 5,
-        verticalAlign: 'middle'
-      }} title="Forked repo">
-        <IconRepoForked className="u-fillRepoForked" />
-      </span>) }
+      <a href={attributes["github-url"]}>{attributes["repo-name"]}</a>
+      {attributes["forked"] && (
+        <span
+          style={{
+            marginLeft: 5,
+            verticalAlign: "middle"
+          }}
+          title="Forked repo"
+        >
+          <IconRepoForked className="u-fillRepoForked" />
+        </span>
+      )}
     </td>
-    <td><span style={{
-      color: 'white',
-      padding: '3px 8px 5px',
-      borderRadius: 3,
-      fontSize: '0.8rem',
-      fontWeight: 400
-    }} className={{
-      'open': 'u-backgroundColorPrOpen',
-      'closed': 'u-backgroundColorPrClosed',
-      'merged': 'u-backgroundColorPrMerged',
-    }[attributes['current-state']]}>
-      <span style={{
-        marginRight: 7,
-        verticalAlign: 'sub',
-      }}>
-        { (attributes['current-state'] === 'open' || attributes['current-state'] === 'closed') && (<IconGitPullRequest className="u-fillWhite" />) }
-        { attributes['current-state'] === 'merged' && (<IconGitMerge className="u-fillWhite" />) }
-      </span>
-      {attributes['current-state']}
-    </span>
-      { attributes['edited'] && (<span
+    <td>
+      <span
         style={{
-          fontSize: '0.8rem',
-          marginLeft: 5,
-          fontStyle: 'italic',
+          color: "white",
+          padding: "3px 8px 5px",
+          borderRadius: 3,
+          fontSize: "0.8rem",
+          fontWeight: 400
         }}
-        title="This PR has a non-Dependabot commit in it">
-        edited
-      </span>) }
+        className={
+          {
+            open: "u-backgroundColorPrOpen",
+            closed: "u-backgroundColorPrClosed",
+            merged: "u-backgroundColorPrMerged"
+          }[attributes["current-state"]]
+        }
+      >
+        <span
+          style={{
+            marginRight: 7,
+            verticalAlign: "sub"
+          }}
+        >
+          {(attributes["current-state"] === "open" ||
+            attributes["current-state"] === "closed") && (
+            <IconGitPullRequest className="u-fillWhite" />
+          )}
+          {attributes["current-state"] === "merged" && (
+            <IconGitMerge className="u-fillWhite" />
+          )}
+        </span>
+        {attributes["current-state"]}
+      </span>
+      {attributes["edited"] && (
+        <span
+          style={{
+            fontSize: "0.8rem",
+            marginLeft: 5,
+            fontStyle: "italic"
+          }}
+          title="This PR has a non-Dependabot commit in it"
+        >
+          edited
+        </span>
+      )}
     </td>
   </tr>
-)
+);
 
-const FailedPullRequests = ({data}) => (
+const FailedPullRequests = ({ data }) => (
   <div className="container">
     <div className="section" style={{ marginTop: -70 }}>
       <h2>Failing pull request updates</h2>
@@ -66,18 +85,18 @@ const FailedPullRequests = ({data}) => (
           </tr>
         </thead>
         <tbody>
-        { data.data.map((pr) => {
-          const { attributes, id } = pr;
-          return <TableRow key={id} attributes={attributes} />
-        }) }
+          {data.data.map(pr => {
+            const { attributes, id } = pr;
+            return <TableRow key={id} attributes={attributes} />;
+          })}
         </tbody>
       </table>
 
-      <p style={{ fontSize: '0.8rem', fontStyle: 'italic' }}>
+      <p style={{ fontSize: "0.8rem", fontStyle: "italic" }}>
         Private repos are excluded from this list.
       </p>
     </div>
   </div>
-)
+);
 
-export default FailedPullRequests
+export default FailedPullRequests;

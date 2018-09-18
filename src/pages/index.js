@@ -1,102 +1,102 @@
-import React from 'react'
-import CountUp from 'react-countup'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import customerPlatedLogo from '../images/customer-plated.svg'
-import customerMojLogo from '../images/customer-moj.svg'
-import customerThoughbotLogo from '../images/customer-thoughtbot.svg'
-import customerFundingCircleLogo from '../images/customer-funding-circle.svg'
-import customerOptimizelyLogo from '../images/customer-optimizely.svg'
-import customerRubyTogetherLogo from '../images/customer-ruby-together.svg'
-import customerGoCardlessLogo from '../images/customer-gocardless.svg'
-import customerCheckrLogo from '../images/customer-checkr.svg'
-import customerGithubLogo from '../images/customer-github.svg'
-import customerGitPrimeLogo from '../images/customer-gitprime.svg'
-import customerWeworkLogo from '../images/customer-wework.svg'
-import customerWireLogo from '../images/customer-wire.svg'
-import iconRuby from '../images/icon-ruby.svg'
-import iconJs from '../images/icon-js.svg'
-import iconPython from '../images/icon-python.svg'
-import iconPhp from '../images/icon-php.svg'
-import iconElixir from '../images/icon-elixir.svg'
-import iconRust from '../images/icon-rust.svg'
-import iconJava from '../images/icon-java.svg'
-import iconGradle from '../images/icon-gradle.svg'
-import iconDotnet from '../images/icon-dotnet.svg'
-import iconGo from '../images/icon-go.svg'
-import iconElm from '../images/icon-elm.svg'
-import iconTerraform from '../images/icon-terraform.svg'
-import iconGit from '../images/icon-git.svg'
-import iconDocker from '../images/icon-docker.svg'
-import iconStackTick from '../images/icon-stack-tick.svg'
-import iconSecurity from '../images/icon-security.svg'
-import iconReview from '../images/icon-review.svg'
-import iconTick from '../images/icon-tick.svg'
-import iconAutomerge from '../images/icon-automerge.svg'
-import iconCalendar from '../images/icon-calendar.svg'
-import iconCheckForUpdates from '../images/icon-check-for-updates.svg'
-import iconOpenPrs from '../images/icon-open-prs.svg'
-import iconReviewAndMerge from '../images/icon-review-and-merge.svg'
-import screenshot from '../images/screenshot.png'
+import React from "react";
+import CountUp from "react-countup";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import customerPlatedLogo from "../images/customer-plated.svg";
+import customerMojLogo from "../images/customer-moj.svg";
+import customerThoughbotLogo from "../images/customer-thoughtbot.svg";
+import customerFundingCircleLogo from "../images/customer-funding-circle.svg";
+import customerOptimizelyLogo from "../images/customer-optimizely.svg";
+import customerRubyTogetherLogo from "../images/customer-ruby-together.svg";
+import customerGoCardlessLogo from "../images/customer-gocardless.svg";
+import customerCheckrLogo from "../images/customer-checkr.svg";
+import customerGithubLogo from "../images/customer-github.svg";
+import customerGitPrimeLogo from "../images/customer-gitprime.svg";
+import customerWeworkLogo from "../images/customer-wework.svg";
+import customerWireLogo from "../images/customer-wire.svg";
+import iconRuby from "../images/icon-ruby.svg";
+import iconJs from "../images/icon-js.svg";
+import iconPython from "../images/icon-python.svg";
+import iconPhp from "../images/icon-php.svg";
+import iconElixir from "../images/icon-elixir.svg";
+import iconRust from "../images/icon-rust.svg";
+import iconJava from "../images/icon-java.svg";
+import iconGradle from "../images/icon-gradle.svg";
+import iconDotnet from "../images/icon-dotnet.svg";
+import iconGo from "../images/icon-go.svg";
+import iconElm from "../images/icon-elm.svg";
+import iconTerraform from "../images/icon-terraform.svg";
+import iconGit from "../images/icon-git.svg";
+import iconDocker from "../images/icon-docker.svg";
+import iconStackTick from "../images/icon-stack-tick.svg";
+import iconSecurity from "../images/icon-security.svg";
+import iconReview from "../images/icon-review.svg";
+import iconTick from "../images/icon-tick.svg";
+import iconAutomerge from "../images/icon-automerge.svg";
+import iconCalendar from "../images/icon-calendar.svg";
+import iconCheckForUpdates from "../images/icon-check-for-updates.svg";
+import iconOpenPrs from "../images/icon-open-prs.svg";
+import iconReviewAndMerge from "../images/icon-review-and-merge.svg";
+import screenshot from "../images/screenshot.png";
 
-const initialMergedPrsCount = 170000
-const initialActiveAccountsCount = 2000
-const initialAccountsMergingPrsCount = 1000
-const promoCompaniesCount = 12
+const initialMergedPrsCount = 170000;
+const initialActiveAccountsCount = 2000;
+const initialAccountsMergingPrsCount = 1000;
+const promoCompaniesCount = 12;
 
 class IndexPage extends React.Component {
   state = {
     mergedPrsCount: initialMergedPrsCount,
     activeAccountsCount: initialActiveAccountsCount,
-    accountsMergingPrsCount: initialAccountsMergingPrsCount,
-  }
+    accountsMergingPrsCount: initialAccountsMergingPrsCount
+  };
 
   componentDidMount() {
     // Only fetch in the browser not when building the site
-    if ('fetch' in window) {
+    if ("fetch" in window) {
       fetch(`${process.env.API_URL}/stats`)
         .then(response => response.json())
         .then(json => {
           const {
             active_accounts_count,
             merged_pull_requests_count,
-            accounts_merging_prs_count,
-          } = json
+            accounts_merging_prs_count
+          } = json;
 
           const mergedPrsCount = merged_pull_requests_count
             ? merged_pull_requests_count
-            : initialMergedPrsCount
+            : initialMergedPrsCount;
           const activeAccountsCount = active_accounts_count
             ? active_accounts_count - promoCompaniesCount
-            : initialActiveAccountsCount
+            : initialActiveAccountsCount;
           const accountsMergingPrsCount = accounts_merging_prs_count
             ? accounts_merging_prs_count
-            : initialAccountsMergingPrsCount
+            : initialAccountsMergingPrsCount;
 
           this.setState({
             mergedPrsCount,
             activeAccountsCount,
-            accountsMergingPrsCount,
-          })
-        })
+            accountsMergingPrsCount
+          });
+        });
     }
   }
 
   formatNumber = number => {
-    if (typeof Intl !== 'undefined') {
-      return Intl.NumberFormat().format(number)
+    if (typeof Intl !== "undefined") {
+      return Intl.NumberFormat().format(number);
     } else {
-      return number
+      return number;
     }
-  }
+  };
 
   render() {
     const {
       mergedPrsCount,
       activeAccountsCount,
-      accountsMergingPrsCount,
-    } = this.state
+      accountsMergingPrsCount
+    } = this.state;
 
     return (
       <Layout>
@@ -529,7 +529,7 @@ class IndexPage extends React.Component {
                 </div>
               </div>
               <p>
-                ... plus{' '}
+                ... plus{" "}
                 <span id="active-accounts">
                   <CountUp
                     start={initialActiveAccountsCount}
@@ -537,8 +537,8 @@ class IndexPage extends React.Component {
                     formattingFn={this.formatNumber}
                     duration={3}
                   />
-                </span>{' '}
-                more, who have merged{' '}
+                </span>{" "}
+                more, who have merged{" "}
                 <span id="merged-prs">
                   <CountUp
                     start={initialMergedPrsCount}
@@ -546,7 +546,7 @@ class IndexPage extends React.Component {
                     formattingFn={this.formatNumber}
                     duration={3}
                   />
-                </span>{' '}
+                </span>{" "}
                 Dependabot pull requests.
               </p>
             </div>
@@ -633,8 +633,8 @@ class IndexPage extends React.Component {
 
         <Footer />
       </Layout>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;

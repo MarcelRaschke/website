@@ -1,10 +1,10 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
-import iconElixir from '../images/icon-elixir.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
+import iconElixir from "../images/icon-elixir.svg";
 
 const ElixirPage = () => (
   <Layout>
@@ -104,6 +104,6 @@ const ElixirPage = () => (
 
     <Footer />
   </Layout>
-)
+);
 
-export default ElixirPage
+export default ElixirPage;

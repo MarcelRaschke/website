@@ -1,10 +1,10 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
-import iconPHP from '../images/icon-php.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
+import iconPHP from "../images/icon-php.svg";
 
 const PHPPage = () => (
   <Layout>
@@ -83,6 +83,6 @@ const PHPPage = () => (
 
     <Footer />
   </Layout>
-)
+);
 
-export default PHPPage
+export default PHPPage;

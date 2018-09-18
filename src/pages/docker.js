@@ -1,13 +1,13 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
-import iconDocker from '../images/icon-docker.svg'
-import iconOpenPrs from '../images/icon-open-prs.svg'
-import iconCheckForUpdates from '../images/icon-check-for-updates.svg'
-import iconReviewAndMerge from '../images/icon-review-and-merge.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
+import iconDocker from "../images/icon-docker.svg";
+import iconOpenPrs from "../images/icon-open-prs.svg";
+import iconCheckForUpdates from "../images/icon-check-for-updates.svg";
+import iconReviewAndMerge from "../images/icon-review-and-merge.svg";
 
 const DockerPage = () => (
   <Layout>
@@ -110,6 +110,6 @@ const DockerPage = () => (
 
     <Footer />
   </Layout>
-)
+);
 
-export default DockerPage
+export default DockerPage;

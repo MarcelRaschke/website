@@ -1,10 +1,10 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
-import iconDotNet from '../images/icon-dotnet.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
+import iconDotNet from "../images/icon-dotnet.svg";
 
 const DotNetPage = () => (
   <Layout>
@@ -63,6 +63,6 @@ const DotNetPage = () => (
 
     <Footer />
   </Layout>
-)
+);
 
-export default DotNetPage
+export default DotNetPage;

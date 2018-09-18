@@ -1,10 +1,10 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { format as formatDate } from 'date-fns'
-import BlogLayout from '../components/blog-layout'
+import React from "react";
+import { graphql } from "gatsby";
+import { format as formatDate } from "date-fns";
+import BlogLayout from "../components/blog-layout";
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   return (
     <BlogLayout>
       <article>
@@ -12,7 +12,7 @@ export default ({ data }) => {
           <h2>{post.frontmatter.title}</h2>
           <span className="post-date">
             <time dateTime={post.frontmatter.date}>
-              {formatDate(post.frontmatter.date, 'MMM DD, YYYY')}
+              {formatDate(post.frontmatter.date, "MMM DD, YYYY")}
             </time>
           </span>
           <br />
@@ -36,8 +36,8 @@ export default ({ data }) => {
         </div>
       </article>
     </BlogLayout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
@@ -49,4 +49,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
