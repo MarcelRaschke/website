@@ -1,11 +1,11 @@
-import React from 'react'
-import { find } from 'lodash'
-import Header from '../../layouts/header'
-import Score from './score'
+import React from "react";
+import { find } from "lodash";
+import Header from "../../components/header";
+import Score from "./score";
 
 class SpecificUpdate extends React.Component {
   render() {
-    const { dependencyName, previousVersion, newVersion } = this.props
+    const { dependencyName, previousVersion, newVersion } = this.props;
     return (
       <Header>
         <div className="section compatibility-score-container">
@@ -20,12 +20,12 @@ class SpecificUpdate extends React.Component {
           {this.compatibilityBoxes()}
         </div>
       </Header>
-    )
+    );
   }
 
   compatibilityBoxes() {
     if (!this.props.data) {
-      return <p>Loading...</p>
+      return <p>Loading...</p>;
     }
 
     return (
@@ -46,43 +46,43 @@ class SpecificUpdate extends React.Component {
           </p>
         </div>
       </div>
-    )
+    );
   }
 
   blurb() {
-    const { dependencyName, previousVersion, newVersion, data } = this.props
+    const { dependencyName, previousVersion, newVersion, data } = this.props;
     const update = find(data.updates, {
       previous_version: previousVersion,
-      updated_version: newVersion,
-    })
+      updated_version: newVersion
+    });
 
     if (!update || update.candidate_updates < 5) {
       return (
         <p>
-          Dependabot hasn't made enough updates for projects migrating{' '}
-          <strong>{dependencyName}</strong> from{' '}
+          Dependabot hasn't made enough updates for projects migrating{" "}
+          <strong>{dependencyName}</strong> from{" "}
           <strong>{previousVersion}</strong> to <strong>{newVersion}</strong> to
           form a view on compatibility yet.
         </p>
-      )
+      );
     }
 
     return (
       <p>
-        Dependabot has updated <strong>{dependencyName}</strong> from{' '}
-        <strong>{previousVersion}</strong> to <strong>{newVersion}</strong> in{' '}
-        <strong>{update.candidate_updates}</strong> projects so far.{' '}
+        Dependabot has updated <strong>{dependencyName}</strong> from{" "}
+        <strong>{previousVersion}</strong> to <strong>{newVersion}</strong> in{" "}
+        <strong>{update.candidate_updates}</strong> projects so far.{" "}
         <strong>
           {semverScore(update.candidate_updates, update.successful_updates)}%
-        </strong>{' '}
+        </strong>{" "}
         of those updates passed CI.
       </p>
-    )
+    );
   }
 }
 
 function semverScore(total, successful) {
-  return Math.round((100.0 * successful) / total)
+  return Math.round((100.0 * successful) / total);
 }
 
-export default SpecificUpdate
+export default SpecificUpdate;

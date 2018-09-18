@@ -1,12 +1,13 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Header from '../layouts/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
-import iconRuby from '../images/icon-ruby.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
+import iconRuby from "../images/icon-ruby.svg";
 
 const RubyPage = () => (
-  <div>
+  <Layout>
     <div className="main-background">
       <Header>
         <div className="section hero">
@@ -27,7 +28,7 @@ const RubyPage = () => (
           <a name="features" />
           <h2>Features</h2>
           <p>
-            Ruby is one of our best supported languages. As well as Dependabot's{' '}
+            Ruby is one of our best supported languages. As well as Dependabot's{" "}
             <a href="/#features">core features</a> it has:
           </p>
           <div className="feature-boxes">
@@ -102,7 +103,7 @@ const RubyPage = () => (
     </div>
 
     <Footer />
-  </div>
-)
+  </Layout>
+);
 
-export default RubyPage
+export default RubyPage;

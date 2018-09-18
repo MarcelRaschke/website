@@ -1,8 +1,8 @@
-const proxy = require('http-proxy-middleware');
+const proxy = require("http-proxy-middleware");
 
 module.exports = {
   siteMetadata: {
-    title: 'Dependabot',
+    title: "Dependabot"
   },
   developMiddleware: app => {
     app.use(
@@ -11,46 +11,44 @@ module.exports = {
         target: "https://api.dependabot.com",
         changeOrigin: true,
         pathRewrite: {
-          "^/api/": "/",
-        },
+          "^/api/": "/"
+        }
       })
     );
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'blog',
-        path: `${__dirname}/src/blog`,
-      },
+        name: "blog",
+        path: `${__dirname}/src/blog`
+      }
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: "gatsby-remark-copy-linked-files",
             options: {
               // defaults to [`png`, `jpg`, `jpeg`, `bmp`, `tiff`]
-              ignoreFileExtensions: [],
-            },
-          },
-        ],
-      },
+              ignoreFileExtensions: []
+            }
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`source sans pro\:200,300,400,600,700`],
-      },
+        fonts: [`source sans pro\:200,300,400,600,700`]
+      }
     },
     {
-      resolve: 'gatsby-plugin-svgr',
-      options: {
-        babel: false,
-      },
-    },
-  ],
-}
+      resolve: "gatsby-plugin-svgr",
+      options: {}
+    }
+  ]
+};

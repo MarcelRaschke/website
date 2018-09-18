@@ -1,12 +1,13 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Header from '../layouts/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
-import iconPython from '../images/icon-python.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
+import iconPython from "../images/icon-python.svg";
 
 const PythonPage = () => (
-  <div>
+  <Layout>
     <div className="main-background">
       <Header>
         <div className="section hero">
@@ -79,7 +80,7 @@ const PythonPage = () => (
     </div>
 
     <Footer />
-  </div>
-)
+  </Layout>
+);
 
-export default PythonPage
+export default PythonPage;

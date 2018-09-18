@@ -1,15 +1,15 @@
-import React from 'react'
-import { find } from 'lodash'
-import Header from '../../layouts/header'
-import Score from './score'
+import React from "react";
+import { find } from "lodash";
+import Header from "../../components/header";
+import Score from "./score";
 
 class SpecificTarget extends React.Component {
   render() {
-    const { dependencyName, data } = this.props
-    let { newVersion } = this.props
+    const { dependencyName, data } = this.props;
+    let { newVersion } = this.props;
 
-    if (newVersion === 'latest') {
-      newVersion = data ? data.latest_version : '...'
+    if (newVersion === "latest") {
+      newVersion = data ? data.latest_version : "...";
     }
 
     return (
@@ -17,7 +17,7 @@ class SpecificTarget extends React.Component {
         <div className="section compatibility-score-container">
           <h2>
             <span className="page-title-prefix">
-              SemVer stability score for{' '}
+              SemVer stability score for{" "}
             </span>
             <span className="repo-name">{dependencyName}</span>
           </h2>
@@ -26,17 +26,17 @@ class SpecificTarget extends React.Component {
           {this.compatibilityBoxes()}
         </div>
       </Header>
-    )
+    );
   }
 
   compatibilityBoxes() {
-    const { dependencyName, packageManager, newVersion, data } = this.props
+    const { dependencyName, packageManager, newVersion, data } = this.props;
 
     if (!data) {
-      return <p>Loading...</p>
+      return <p>Loading...</p>;
     }
 
-    const scoreProps = { dependencyName, packageManager, newVersion }
+    const scoreProps = { dependencyName, packageManager, newVersion };
 
     return (
       <div className="compatibility-boxes">
@@ -56,40 +56,40 @@ class SpecificTarget extends React.Component {
           </p>
         </div>
       </div>
-    )
+    );
   }
 
   blurb() {
-    const { dependencyName, newVersion, data } = this.props
-    const update = _.find(data.semver_updates, { updated_version: newVersion })
+    const { dependencyName, newVersion, data } = this.props;
+    const update = find(data.semver_updates, { updated_version: newVersion });
 
     if (!update || update.candidate_updates < 5) {
       return (
         <p>
-          Dependabot hasn't made enough updates for projects migrating{' '}
+          Dependabot hasn't made enough updates for projects migrating{" "}
           <strong>{dependencyName}</strong> to <strong>{newVersion}</strong> to
           form a view on compatibility yet.
         </p>
-      )
+      );
     }
 
     return (
       <p>
-        Dependabot has updated <strong>{dependencyName}</strong> to{' '}
-        <strong>{newVersion}</strong> from a SemVer compatible version{' '}
+        Dependabot has updated <strong>{dependencyName}</strong> to{" "}
+        <strong>{newVersion}</strong> from a SemVer compatible version{" "}
         <strong>{update.candidate_updates}</strong> times so far.
         <br />
         <strong>
           {semverScore(update.candidate_updates, update.successful_updates)}%
-        </strong>{' '}
+        </strong>{" "}
         of those updates passed CI.
       </p>
-    )
+    );
   }
 }
 
 function semverScore(total, successful) {
-  return Math.round((100.0 * successful) / total)
+  return Math.round((100.0 * successful) / total);
 }
 
-export default SpecificTarget
+export default SpecificTarget;

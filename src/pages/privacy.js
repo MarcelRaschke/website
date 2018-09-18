@@ -1,11 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Header from '../layouts/header'
-import Footer from '../components/footer'
-import dependabotLogo from '../images/dependabot-logo-square.svg'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import dependabotLogo from "../images/dependabot-logo-square.svg";
 
 const PrivacyPage = () => (
-  <div>
+  <Layout>
     <div className="main-background">
       <Header />
 
@@ -85,8 +86,8 @@ const PrivacyPage = () => (
           hold about you, its origin and any recipients of it as well as the
           purpose of any data processing carried out. Please note that, in
           accordance with the Data Protection Act 1998, a £10 admin fee is
-          applicable. For further information, please contact us by emailing{' '}
-          <a href="mailto:support@dependabot.com">support@dependabot.com</a>{' '}
+          applicable. For further information, please contact us by emailing{" "}
+          <a href="mailto:support@dependabot.com">support@dependabot.com</a>{" "}
           with the subject 'Data subject access request'.
         </p>
         <p>
@@ -138,7 +139,7 @@ const PrivacyPage = () => (
     </div>
 
     <Footer />
-  </div>
-)
+  </Layout>
+);
 
-export default PrivacyPage
+export default PrivacyPage;

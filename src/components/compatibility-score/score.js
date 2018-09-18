@@ -1,15 +1,15 @@
-import React from 'react'
-import queryString from 'query-string'
+import React from "react";
+import queryString from "query-string";
 
 const CompatibilityScore = ({ className, footer, ...props }) => {
-  const baseUrl = window.location.href.split('?')[0]
+  const baseUrl = window.location.href.split("?")[0];
   const allUrl = `${baseUrl}?${queryString.stringify({
-    'dependency-name': props.dependencyName,
-    'package-manager': props.packageManager,
-    'version-scheme': 'semver',
-  })}`
+    "dependency-name": props.dependencyName,
+    "package-manager": props.packageManager,
+    "version-scheme": "semver"
+  })}`;
   return (
-    <div className={`compatibility-score ${className || ''}`}>
+    <div className={`compatibility-score ${className || ""}`}>
       {props.enableLink ? <LinkedBadge {...props} /> : <Badge {...props} />}
 
       <div className="compatibility-score-footer">
@@ -24,14 +24,14 @@ const CompatibilityScore = ({ className, footer, ...props }) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Badge = props => (
   <div className="compatibility-score-badge">
     <BadgeImage {...props} />
   </div>
-)
+);
 
 const LinkedBadge = props => (
   <a
@@ -45,7 +45,7 @@ const LinkedBadge = props => (
   >
     <BadgeImage {...props} />
   </a>
-)
+);
 
 const BadgeImage = props => (
   <img
@@ -56,7 +56,7 @@ const BadgeImage = props => (
       props.previousVersion
     )}
   />
-)
+);
 
 function compatibilityBadgeUrl(
   dependencyName,
@@ -65,30 +65,30 @@ function compatibilityBadgeUrl(
   previousVersion
 ) {
   let params = {
-    'dependency-name': dependencyName,
-    'package-manager': packageManager,
-  }
+    "dependency-name": dependencyName,
+    "package-manager": packageManager
+  };
 
   // If we're not supplying versions, get a badge for the entire dependency history
   // Otherwise, get a badge for just the version bump we care about
   if (previousVersion && newVersion) {
     params = {
       ...params,
-      'previous-version': previousVersion,
-      'new-version': newVersion,
-    }
+      "previous-version": previousVersion,
+      "new-version": newVersion
+    };
   } else if (newVersion) {
     params = {
       ...params,
-      'target-version': newVersion,
-      'version-scheme': 'semver',
-    }
+      "target-version": newVersion,
+      "version-scheme": "semver"
+    };
   } else {
-    params = { ...params, 'version-scheme': 'semver' }
+    params = { ...params, "version-scheme": "semver" };
   }
 
-  const query = queryString.stringify(params)
-  return `${process.env.API_URL}/badges/compatibility_score?${query}`
+  const query = queryString.stringify(params);
+  return `${process.env.API_URL}/badges/compatibility_score?${query}`;
 }
 
 function compatibilityScoreUrl(
@@ -98,14 +98,14 @@ function compatibilityScoreUrl(
   previousVersion
 ) {
   let params = {
-    'dependency-name': dependencyName,
-    'package-manager': packageManager,
-    'previous-version': previousVersion,
-    'new-version': newVersion,
-  }
-  const baseUrl = window.location.href.split('?')[0]
-  const query = queryString.stringify(params)
-  return `${baseUrl}?${query}`
+    "dependency-name": dependencyName,
+    "package-manager": packageManager,
+    "previous-version": previousVersion,
+    "new-version": newVersion
+  };
+  const baseUrl = window.location.href.split("?")[0];
+  const query = queryString.stringify(params);
+  return `${baseUrl}?${query}`;
 }
 
-export default CompatibilityScore
+export default CompatibilityScore;

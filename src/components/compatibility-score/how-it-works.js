@@ -1,7 +1,7 @@
-import React from 'react'
-import iconCheckForUpdates from '../../images/icon-check-for-updates.svg'
-import iconOpenPrs from '../../images/icon-open-prs.svg'
-import iconReviewAndMerge from '../../images/icon-review-and-merge.svg'
+import React from "react";
+import iconCheckForUpdates from "../../images/icon-check-for-updates.svg";
+import iconOpenPrs from "../../images/icon-open-prs.svg";
+import iconReviewAndMerge from "../../images/icon-review-and-merge.svg";
 
 const HowItWorks = () => (
   <div className="container">
@@ -51,6 +51,6 @@ const HowItWorks = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default HowItWorks
+export default HowItWorks;
