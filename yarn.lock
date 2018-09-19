@@ -4172,9 +4172,9 @@ gatsby-cli@^2.0.0-rc.6:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-codemods@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.0.2.tgz#7b2bdc25ef24aa6972b9121bb3840ad9a443ade9"
+gatsby-codemods@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.0.3.tgz#e954e1d967c690bb01e421280d8406016643371a"
   dependencies:
     "@babel/runtime" "^7.0.0"
 

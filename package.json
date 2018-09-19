@@ -6,7 +6,7 @@
   "dependencies": {
     "date-fns": "^1.29.0",
     "gatsby": "^2.0.0",
-    "gatsby-codemods": "^1.0.2",
+    "gatsby-codemods": "^1.0.3",
     "gatsby-link": "^2.0.1",
     "gatsby-plugin-feed": "^2.0.5",
     "gatsby-plugin-google-fonts": "^0.0.4",
