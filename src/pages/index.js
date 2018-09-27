@@ -13,7 +13,7 @@ import customerGoCardlessLogo from "../images/customer-gocardless.svg";
 import customerCheckrLogo from "../images/customer-checkr.svg";
 import customerGithubLogo from "../images/customer-github.svg";
 import customerGitPrimeLogo from "../images/customer-gitprime.svg";
-import customerWeworkLogo from "../images/customer-wework.svg";
+import customerProductHuntLogo from "../images/customer-product-hunt.svg";
 import customerWireLogo from "../images/customer-wire.svg";
 import iconRuby from "../images/icon-ruby.svg";
 import iconJs from "../images/icon-js.svg";
@@ -493,8 +493,8 @@ class IndexPage extends React.Component {
                   </a>
                 </div>
                 <div className="customer-logo">
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Awework">
-                    <img src={customerWeworkLogo} />
+                  <a href="https://producthunt.com">
+                    <img src={customerProductHuntLogo} />
                   </a>
                 </div>
                 <div className="customer-logo">
