@@ -1,6 +1,4 @@
-import { Link } from "gatsby";
 import React from "react";
-import Nav from "../components/nav";
 
 const Footer = () => (
   <div className="container">

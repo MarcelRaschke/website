@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import queryString from "query-string";
 import Layout from "../components/layout";
@@ -8,7 +7,6 @@ import SpecificTarget from "../components/compatibility-score/specific-target";
 import AllUpdates from "../components/compatibility-score/all-updates";
 import FailedPullRequests from "../components/compatibility-score/failed-pull-requests";
 import HowItWorks from "../components/compatibility-score/how-it-works";
-import dependabotLogo from "../images/dependabot-logo-square.svg";
 
 class CompatibilityScorePage extends React.Component {
   state = { params: {}, compatibilityScores: null, failedPullRequests: null };

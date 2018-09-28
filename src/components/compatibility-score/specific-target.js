@@ -60,7 +60,11 @@ class SpecificTarget extends React.Component {
   }
 
   blurb() {
-    const { dependencyName, newVersion, data } = this.props;
+    const { dependencyName, data } = this.props;
+    let { newVersion } = this.props;
+    if (newVersion === "latest") {
+      newVersion = data ? data.latest_version : "...";
+    }
     const update = find(data.semver_updates, { updated_version: newVersion });
 
     if (!update || update.candidate_updates < 5) {
