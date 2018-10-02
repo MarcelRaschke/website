@@ -8,7 +8,7 @@
     "gatsby": "^2.0.12",
     "gatsby-codemods": "^1.0.5",
     "gatsby-link": "^2.0.1",
-    "gatsby-plugin-feed": "^2.0.5",
+    "gatsby-plugin-feed": "^2.0.6",
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
