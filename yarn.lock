@@ -4795,10 +4795,10 @@ gatsby-cli@^2.4.2:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-codemods@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.0.4.tgz#1711778ba2573e866224309c4236c8dcd9586113"
-  integrity sha512-ss8UvGrugJoO8eUEKBVCx3y6KvvTenGHZnzVD2hwAsw79n7QMUI4IXY90+hn4PElDi5d7Ni5JzJpt1aeS2mnvQ==
+gatsby-codemods@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.0.5.tgz#a1adda31ff25901f9e1c3fb8ee70b4cdcfc33c8d"
+  integrity sha512-sgjQe2u6CvtyHG/nNgQCi2JwdRptwAo/IXpn15oRJ4AXlPr6A4gAUxLg6shgD6WL1ZDhlBBKl8QsqaTHDgB9rw==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
