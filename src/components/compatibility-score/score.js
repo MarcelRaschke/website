@@ -1,13 +1,16 @@
 import React from "react";
-import queryString from "query-string";
+import qs from "qs";
 
 const CompatibilityScore = ({ className, footer, ...props }) => {
   const baseUrl = window.location.href.split("?")[0];
-  const allUrl = `${baseUrl}?${queryString.stringify({
-    "dependency-name": props.dependencyName,
-    "package-manager": props.packageManager,
-    "version-scheme": "semver"
-  })}`;
+  const allUrl = `${baseUrl}?${qs.stringify(
+    {
+      "dependency-name": props.dependencyName,
+      "package-manager": props.packageManager,
+      "version-scheme": "semver"
+    },
+    { strictNullHandling: true }
+  )}`;
   return (
     <div className={`compatibility-score ${className || ""}`}>
       {props.enableLink ? <LinkedBadge {...props} /> : <Badge {...props} />}
@@ -87,7 +90,7 @@ function compatibilityBadgeUrl(
     params = { ...params, "version-scheme": "semver" };
   }
 
-  const query = queryString.stringify(params);
+  const query = qs.stringify(params, { strictNullHandling: true });
   return `${process.env.API_URL}/badges/compatibility_score?${query}`;
 }
 
@@ -104,7 +107,7 @@ function compatibilityScoreUrl(
     "new-version": newVersion
   };
   const baseUrl = window.location.href.split("?")[0];
-  const query = queryString.stringify(params);
+  const query = qs.stringify(params, { strictNullHandling: true });
   return `${baseUrl}?${query}`;
 }
 
