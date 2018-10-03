@@ -4951,10 +4951,10 @@ gatsby-transformer-remark@^2.1.1:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-gatsby@^2.0.14:
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.14.tgz#cd7de9d27d9656d1da020a0562628a44643a6fac"
-  integrity sha512-TbzqAA9AlWwQ8BQCDibJMcsDi6Hks4son9DtHdyCpzpw+aouDgPR2Z+rVJ9UIkFqlmrT3MR4E50zftPlhQ6zjg==
+gatsby@^2.0.17:
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.17.tgz#4784f841e1d67e5b6d217c7b831cdd009c213750"
+  integrity sha512-166SSKKFMqU4RsHS/CMiRg3/iU24TL9/vbVn+vFaRK2kWWR5EVvMFGOnon60tSTK8a3X665LYDlc8YTGEmPjGg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
