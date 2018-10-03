@@ -1,5 +1,5 @@
 import React from "react";
-import queryString from "query-string";
+import qs from "qs";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
 import SpecificUpdate from "../components/compatibility-score/specific-update";
@@ -13,7 +13,10 @@ class CompatibilityScorePage extends React.Component {
 
   componentDidMount() {
     const { location } = this.props;
-    const queryParams = queryString.parse(location.search);
+    const queryParams = qs.parse(location.search, {
+      ignoreQueryPrefix: true,
+      strictNullHandling: true
+    });
     const params = {
       dependencyName: queryParams["dependency-name"],
       packageManager: queryParams["package-manager"],
@@ -62,11 +65,14 @@ class CompatibilityScorePage extends React.Component {
   }
 
   fetchCompatibilityScores(params) {
-    const query = queryString.stringify({
-      "dependency-name": params.dependencyName,
-      "package-manager": params.packageManager,
-      "version-scheme": "semver"
-    });
+    const query = qs.stringify(
+      {
+        "dependency-name": params.dependencyName,
+        "package-manager": params.packageManager,
+        "version-scheme": "semver"
+      },
+      { strictNullHandling: true }
+    );
 
     const apiUlr = `${process.env.API_URL}/compatibility_scores?${query}`;
 
@@ -92,7 +98,9 @@ class CompatibilityScorePage extends React.Component {
       failingPullRequestParams["version-scheme"] = "semver";
     }
 
-    const query = queryString.stringify(failingPullRequestParams);
+    const query = qs.stringify(failingPullRequestParams, {
+      strictNullHandling: true
+    });
     const apiUrl = `${process.env.API_URL}/failing_pull_requests?${query}`;
 
     fetch(apiUrl)
