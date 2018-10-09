@@ -473,91 +473,151 @@ class IndexPage extends React.Component {
             <div className="section customers">
               <a name="customers" />
               <h2>Trusted by</h2>
-              <div className="customer-logos">
-                <div className="customer-logo">
-                  <a href="https://www.gov.uk">
-                    <img src={customerMojLogo} />
-                  </a>
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Aalphagov">
-                    <ViewPullRequests />
-                  </a>
+              <div className="CustomerLogos">
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://www.gov.uk">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerMojLogo}
+                      />
+                    </a>
+                    <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Aalphagov">
+                      <ViewPullRequests />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://github.com">
-                    <img src={customerGithubLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://github.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerGithubLogo}
+                      />
+                    </a>
 
-                  <a href="https://github.com/pulls?page=1&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Agithub">
-                    <ViewPullRequests />
-                  </a>
+                    <a href="https://github.com/pulls?page=1&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Agithub">
+                      <ViewPullRequests />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://thoughtbot.com">
-                    <img src={customerThoughbotLogo} />
-                  </a>
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Athoughtbot">
-                    <ViewPullRequests />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://thoughtbot.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerThoughbotLogo}
+                      />
+                    </a>
+                    <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Athoughtbot">
+                      <ViewPullRequests />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://www.fundingcircle.com">
-                    <img src={customerFundingCircleLogo} />
-                  </a>
-                  <a href="https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Afundingcircle">
-                    <ViewPullRequests />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://www.fundingcircle.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerFundingCircleLogo}
+                      />
+                    </a>
+                    <a href="https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Afundingcircle">
+                      <ViewPullRequests />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://gocardless.com">
-                    <img src={customerGoCardlessLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://gocardless.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerGoCardlessLogo}
+                      />
+                    </a>
 
-                  <a href="https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Agocardless">
-                    <ViewPullRequests />
-                  </a>
+                    <a href="https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Agocardless">
+                      <ViewPullRequests />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://wire.com/">
-                    <img src={customerWireLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://wire.com/">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerWireLogo}
+                      />
+                    </a>
 
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Awireapp">
-                    <ViewPullRequests />
-                  </a>
+                    <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Awireapp">
+                      <ViewPullRequests />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://rubytogether.org">
-                    <img src={customerRubyTogetherLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://rubytogether.org">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerRubyTogetherLogo}
+                      />
+                    </a>
 
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Arubytogether">
-                    <ViewPullRequests />
-                  </a>
+                    <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Arubytogether">
+                      <ViewPullRequests />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://www.plated.com">
-                    <img src={customerPlatedLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://www.plated.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerPlatedLogo}
+                      />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://www.optimizely.com">
-                    <img src={customerOptimizelyLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://www.optimizely.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerOptimizelyLogo}
+                      />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://www.checkr.com">
-                    <img src={customerCheckrLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://www.checkr.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerCheckrLogo}
+                      />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://gitprime.com">
-                    <img src={customerGitPrimeLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://gitprime.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerGitPrimeLogo}
+                      />
+                    </a>
+                  </div>
                 </div>
-                <div className="customer-logo">
-                  <a href="https://producthunt.com">
-                    <img src={customerProductHuntLogo} />
-                  </a>
+                <div className="CustomerLogos-Item">
+                  <div className="CustomerLogos-Item-Content">
+                    <a href="https://producthunt.com">
+                      <img
+                        className="CustomerLogos-Item-Logo"
+                        src={customerProductHuntLogo}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
               <p>
