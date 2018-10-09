@@ -6,8 +6,7 @@ import iconReviewAndMerge from "../../images/icon-review-and-merge.svg";
 const HowItWorks = () => (
   <div className="container">
     <div className="section how-it-works" style={{ marginTop: -50 }}>
-      <a name="how-it-works" />
-      <h2>How the score is calculated</h2>
+      <h2 id="how-it-works">How the score is calculated</h2>
       <div className="how-it-works-boxes">
         <div className="how-it-works-box">
           <div className="how-it-works-icon">

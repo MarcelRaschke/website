@@ -1,0 +1,21 @@
+.ViewPullRequests {
+  position: relative;
+  top: 7px;
+  padding: 3px 7px;
+  font-size: 12px;
+  border: 1px solid rgba(124, 131, 180, 0.31);
+  border-radius: 4px;
+}
+
+.ViewPullRequests:hover {
+  cursor: pointer;
+  background-color: rgba(124, 130, 182, 0.1);
+}
+
+.ViewPullRequests-Icon {
+  width: 9px;
+  height: auto;
+  position: relative;
+  top: 2px;
+  margin-left: 5px;
+}

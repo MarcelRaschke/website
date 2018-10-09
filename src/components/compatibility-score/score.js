@@ -52,6 +52,7 @@ const LinkedBadge = props => (
 
 const BadgeImage = props => (
   <img
+    alt="Compatibility score"
     src={compatibilityBadgeUrl(
       props.dependencyName,
       props.packageManager,

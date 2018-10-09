@@ -38,13 +38,21 @@ import iconCalendar from "../images/icon-calendar.svg";
 import iconCheckForUpdates from "../images/icon-check-for-updates.svg";
 import iconOpenPrs from "../images/icon-open-prs.svg";
 import iconReviewAndMerge from "../images/icon-review-and-merge.svg";
+import { ReactComponent as LinkExternal } from "../images/icon-link-external.svg";
 import screenshot from "../images/screenshot.png";
+import "./index.scss";
 
 const initialMergedPrsCount = 170000;
 const initialActiveAccountsCount = 2000;
 const initialAccountsMergingPrsCount = 1000;
 const promoCompaniesCount = 12;
 
+const ViewPullRequests = () => (
+  <span className="u-link-clean u-color-secondary ViewPullRequests">
+    View pull requests
+    <LinkExternal className="u-fill-secondary ViewPullRequests-Icon" />
+  </span>
+);
 class IndexPage extends React.Component {
   state = {
     mergedPrsCount: initialMergedPrsCount,
@@ -467,43 +475,73 @@ class IndexPage extends React.Component {
               <h2>Trusted by</h2>
               <div className="customer-logos">
                 <div className="customer-logo">
-                  <a href="https://www.plated.com">
-                    <img src={customerPlatedLogo} />
-                  </a>
-                </div>
-                <div className="customer-logo">
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Aalphagov">
+                  <a href="https://www.gov.uk">
                     <img src={customerMojLogo} />
                   </a>
+                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Aalphagov">
+                    <ViewPullRequests />
+                  </a>
                 </div>
                 <div className="customer-logo">
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Athoughtbot">
+                  <a href="https://github.com">
+                    <img src={customerGithubLogo} />
+                  </a>
+
+                  <a href="https://github.com/pulls?page=1&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Agithub">
+                    <ViewPullRequests />
+                  </a>
+                </div>
+                <div className="customer-logo">
+                  <a href="https://thoughtbot.com">
                     <img src={customerThoughbotLogo} />
+                  </a>
+                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Athoughtbot">
+                    <ViewPullRequests />
                   </a>
                 </div>
                 <div className="customer-logo">
                   <a href="https://www.fundingcircle.com">
                     <img src={customerFundingCircleLogo} />
                   </a>
-                </div>
-                <div className="customer-logo">
-                  <a href="https://www.optimizely.com/">
-                    <img src={customerOptimizelyLogo} />
-                  </a>
-                </div>
-                <div className="customer-logo">
-                  <a href="https://producthunt.com">
-                    <img src={customerProductHuntLogo} />
-                  </a>
-                </div>
-                <div className="customer-logo">
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Arubytogether">
-                    <img src={customerRubyTogetherLogo} />
+                  <a href="https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Afundingcircle">
+                    <ViewPullRequests />
                   </a>
                 </div>
                 <div className="customer-logo">
                   <a href="https://gocardless.com">
                     <img src={customerGoCardlessLogo} />
+                  </a>
+
+                  <a href="https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Agocardless">
+                    <ViewPullRequests />
+                  </a>
+                </div>
+                <div className="customer-logo">
+                  <a href="https://wire.com/">
+                    <img src={customerWireLogo} />
+                  </a>
+
+                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Awireapp">
+                    <ViewPullRequests />
+                  </a>
+                </div>
+                <div className="customer-logo">
+                  <a href="https://rubytogether.org">
+                    <img src={customerRubyTogetherLogo} />
+                  </a>
+
+                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Arubytogether">
+                    <ViewPullRequests />
+                  </a>
+                </div>
+                <div className="customer-logo">
+                  <a href="https://www.plated.com">
+                    <img src={customerPlatedLogo} />
+                  </a>
+                </div>
+                <div className="customer-logo">
+                  <a href="https://www.optimizely.com">
+                    <img src={customerOptimizelyLogo} />
                   </a>
                 </div>
                 <div className="customer-logo">
@@ -512,18 +550,13 @@ class IndexPage extends React.Component {
                   </a>
                 </div>
                 <div className="customer-logo">
-                  <a href="https://github.com/pulls?page=1&q=is%3Apr+author%3Aapp%2Fdependabot+org%3Agithub">
-                    <img src={customerGithubLogo} />
-                  </a>
-                </div>
-                <div className="customer-logo">
                   <a href="https://gitprime.com">
                     <img src={customerGitPrimeLogo} />
                   </a>
                 </div>
                 <div className="customer-logo">
-                  <a href="https://github.com/pulls?q=is%3Apr+author%3Aapp%2Fdependabot+org%3Awireapp">
-                    <img src={customerWireLogo} />
+                  <a href="https://producthunt.com">
+                    <img src={customerProductHuntLogo} />
                   </a>
                 </div>
               </div>
