@@ -75,7 +75,6 @@ const SubmodulesPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             Alongside Dependabot's <a href="/#features">core features</a>, our

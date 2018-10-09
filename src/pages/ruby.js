@@ -24,7 +24,6 @@ const RubyPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             Ruby is one of our best supported languages. As well as Dependabot's{" "}

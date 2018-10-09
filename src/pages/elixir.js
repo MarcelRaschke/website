@@ -24,7 +24,6 @@ const ElixirPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             Elixir is one of Dependabot's best supported languages. Alongside

@@ -24,7 +24,6 @@ const RustPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             Rust is one of Dependabot's newest languages. We're still rapidly

@@ -24,7 +24,6 @@ const DotNetPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             .NET is one of Dependabot's newest languages and we currently only

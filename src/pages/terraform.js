@@ -24,7 +24,6 @@ const TerraformPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             Updating Terraform modules is one of Dependabot's newest features
