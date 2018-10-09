@@ -201,8 +201,7 @@ class IndexPage extends React.Component {
         <div className="features-bg">
           <div className="container">
             <div className="section">
-              <a name="features" />
-              <h2>Features</h2>
+              <h2 id="features">Features</h2>
               <div className="feature-boxes">
                 <div className="feature-box">
                   <div className="feature-icon">

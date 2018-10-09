@@ -24,7 +24,6 @@ const PHPPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             Dependabot has supported PHP since June 2017. As well as

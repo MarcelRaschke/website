@@ -24,7 +24,6 @@ const GoPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             Go is one of Dependabot's newest languages and is currently in

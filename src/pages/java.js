@@ -24,7 +24,6 @@ const JavaPage = () => (
 
       <div className="container">
         <div className="section">
-          <a name="features" />
           <h2>Features</h2>
           <p>
             Java is one of Dependabot's newest languages. We're still rapidly
@@ -36,9 +35,13 @@ const JavaPage = () => (
               <div className="feature-description">
                 <h3>Support for Maven and Gradle</h3>
                 <p>
-                  Dependabot can update pom.xml and build.gradle files.
-                  Support for sbt is planned - if you'd like to be a beta tester
-                  for it please <a href="https://github.com/dependabot/dependabot-core/issues/352">let us know</a>.
+                  Dependabot can update pom.xml and build.gradle files. Support
+                  for sbt is planned - if you'd like to be a beta tester for it
+                  please{" "}
+                  <a href="https://github.com/dependabot/dependabot-core/issues/352">
+                    let us know
+                  </a>
+                  .
                 </p>
               </div>
             </div>
