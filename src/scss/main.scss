@@ -17,7 +17,7 @@
   padding: 0 20px;
   @media only screen and (min-width: 768px) {
     padding: 0 30px;
-    max-width: 880px;
+    max-width: 940px;
   }
 }
 
@@ -355,7 +355,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 880px;
+  max-width: 860px;
   @media only screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -438,6 +438,16 @@ a .language-name {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 60px;
+  overflow: visible;
+}
+
+.pricing-bg .container {
+  max-width: 500px;
+  padding: 0 10px;
+
+  @media only screen and (min-width: 860px) {
+    max-width: 940px;
+  }
 }
 
 .pricing-bg {
@@ -447,7 +457,10 @@ a .language-name {
 .pricing-boxes {
   display: flex;
   flex-direction: column;
-  @media only screen and (min-width: 768px) {
+  text-align: left;
+
+  @media only screen and (min-width: 860px) {
+    text-align: center;
     flex-direction: row;
   }
 }
@@ -459,10 +472,10 @@ a .language-name {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
-  @media only screen and (min-width: 768px) {
-    margin: 10px;
+  @media only screen and (min-width: 860px) {
+    margin: 8px;
     text-align: center;
-    max-width: 230px;
+    max-width: 223px;
     display: block;
   }
 }
@@ -471,12 +484,12 @@ a .language-name {
   display: flex;
   flex-direction: row;
   width: 100%;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 860px) {
     display: block;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 860px) {
   .pricing-box:first-child {
     margin-left: auto;
   }
@@ -488,7 +501,7 @@ a .language-name {
 .plan-name {
   margin: 10px;
   display: block;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 860px) {
     height: 50px;
     margin: 0;
   }
@@ -503,7 +516,7 @@ a .language-name {
   margin: 10px;
   max-width: 300px;
   flex: 1;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 860px) {
     margin: 0.5rem 0;
   }
 }
@@ -518,7 +531,7 @@ a .language-name {
   padding: 7px;
   text-align: right;
   flex-direction: column;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 860px) {
     text-align: center;
     margin: 40px 0px 0px;
     font-size: 4.5rem;
@@ -531,7 +544,7 @@ a .language-name {
   font-size: 1rem;
   font-weight: 300;
   margin: 10px 0px 0px;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 860px) {
     margin: 40px 0px 10px;
   }
 }
