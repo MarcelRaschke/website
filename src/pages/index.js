@@ -684,6 +684,22 @@ class IndexPage extends React.Component {
                   <div className="pricing-box-main">
                     <div className="plan-details">
                       <div className="plan-name">
+                        <h3>Business</h3>
+                      </div>
+                      <p>Up to 25 private projects on an organization account</p>
+                    </div>
+                    <div className="price">
+                      $50 <span className="month">per month</span>
+                    </div>
+                  </div>
+                  <div className="pricing-box-offer">
+                    <p>Free trial for 14 days!</p>
+                  </div>
+                </div>
+                <div className="pricing-box">
+                  <div className="pricing-box-main">
+                    <div className="plan-details">
+                      <div className="plan-name">
                         <h3>Unlimited</h3>
                       </div>
                       <p>
@@ -691,7 +707,7 @@ class IndexPage extends React.Component {
                       </p>
                     </div>
                     <div className="price">
-                      $50 <span className="month">per month</span>
+                      $100 <span className="month">per month</span>
                     </div>
                   </div>
                   <div className="pricing-box-offer">
