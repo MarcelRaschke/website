@@ -22,7 +22,7 @@
     "normalize.css": "^8.0.0",
     "qs": "^6.5.2",
     "react": "^16.6.0",
-    "react-countup": "^3.0.3",
+    "react-countup": "^4.0.0",
     "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0"
   },
