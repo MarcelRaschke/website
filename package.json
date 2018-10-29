@@ -13,7 +13,7 @@
     "gatsby-plugin-react-helmet": "^3.0.1",
     "gatsby-plugin-sass": "^2.0.1",
     "gatsby-plugin-svgr": "^2.0.0-alpha",
-    "gatsby-remark-copy-linked-files": "^2.0.5",
+    "gatsby-remark-copy-linked-files": "^2.0.6",
     "gatsby-remark-static-images": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-remark": "^2.1.1",
