@@ -5,7 +5,7 @@
   "author": "Harry Marr <harry.marr@gmail.com>",
   "dependencies": {
     "date-fns": "^1.29.0",
-    "gatsby": "^2.0.35",
+    "gatsby": "^2.0.36",
     "gatsby-codemods": "^1.0.6",
     "gatsby-link": "^2.0.1",
     "gatsby-plugin-feed": "^2.0.9",
