@@ -42,7 +42,7 @@ import { ReactComponent as LinkExternal } from "../images/icon-link-external.svg
 import screenshot from "../images/screenshot.png";
 import "./index.scss";
 
-const initialMergedPrsCount = 170000;
+const initialMergedPrsCount = 235813;
 const initialActiveAccountsCount = 2000;
 const initialAccountsMergingPrsCount = 1000;
 const promoCompaniesCount = 12;
@@ -686,7 +686,9 @@ class IndexPage extends React.Component {
                       <div className="plan-name">
                         <h3>Business</h3>
                       </div>
-                      <p>Up to 25 private projects on an organization account</p>
+                      <p>
+                        Up to 25 private projects on an organization account
+                      </p>
                     </div>
                     <div className="price">
                       $50 <span className="month">per month</span>
