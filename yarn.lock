@@ -4829,10 +4829,10 @@ gatsby-cli@^2.4.4:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-codemods@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.0.6.tgz#96bfab5f804bb574292a156ba9f23b801b878893"
-  integrity sha512-rkQFhV97jMkES1TXtZTezUOk5+5DkIYyOAvo4MsH/uC2H6OQT32hMa8j6S0SAG7jAQCTJw7EnzqOAYVuZq0hQQ==
+gatsby-codemods@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-codemods/-/gatsby-codemods-1.0.7.tgz#fc7ff827bc9a96d0b6fde370f6121a9210bb1d62"
+  integrity sha512-YGc49y6Hmlh28SVu03eRV9RNnDx9/jrCsghiuk+QxjTjSfi+EBOVlTDhQZcYNXrs1BI0XsA/vblVMP0euINtrg==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
@@ -9726,14 +9726,6 @@ sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-
-scheduler@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.10.0.tgz#7988de90fe7edccc774ea175a783e69c40c521e1"
-  integrity sha512-+TSTVTCBAA3h8Anei3haDc1IRwMeDmtI/y/o3iBe3Mjl2vwYF9DtPDt929HyRmV/e7au7CLu8sc4C4W0VOs29w==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.11.0:
   version "0.11.0"
