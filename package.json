@@ -10,7 +10,7 @@
     "gatsby-link": "^2.0.1",
     "gatsby-plugin-feed": "^2.0.9",
     "gatsby-plugin-google-fonts": "^0.0.4",
-    "gatsby-plugin-react-helmet": "^3.0.1",
+    "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.1",
     "gatsby-plugin-svgr": "^2.0.0-alpha",
     "gatsby-remark-copy-linked-files": "^2.0.6",
