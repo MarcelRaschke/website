@@ -47,11 +47,13 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
-                  url: site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                  url:
+                    site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
+                  guid:
+                    site.siteMetadata.siteUrl + "/blog" + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }]
+                });
+              });
             },
             query: `
               {
@@ -72,10 +74,10 @@ module.exports = {
                 }
               }
             `,
-            output: "/blog/rss.xml",
-          },
-        ],
-      },
+            output: "/blog/rss.xml"
+          }
+        ]
+      }
     },
     {
       resolve: "gatsby-transformer-remark",
@@ -98,7 +100,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-svgr",
+      resolve: "svgr",
       options: {}
     }
   ]

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Harry Marr <harry.marr@gmail.com>",
   "dependencies": {
+    "@svgr/webpack": "^4.0.3",
     "date-fns": "^1.29.0",
     "gatsby": "^2.0.50",
     "gatsby-codemods": "^1.0.7",
@@ -12,7 +13,6 @@
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.1",
-    "gatsby-plugin-svgr": "^2.0.0-alpha",
     "gatsby-remark-copy-linked-files": "^2.0.6",
     "gatsby-remark-static-images": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.1",
