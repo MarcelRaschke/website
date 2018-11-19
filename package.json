@@ -6,7 +6,7 @@
   "dependencies": {
     "@svgr/webpack": "^4.0.3",
     "date-fns": "^1.29.0",
-    "gatsby": "^2.0.51",
+    "gatsby": "^2.0.52",
     "gatsby-codemods": "^1.0.7",
     "gatsby-link": "^2.0.1",
     "gatsby-plugin-feed": "^2.0.9",
