@@ -36,8 +36,8 @@ being on the latest version is the best strategy for
 the latest version is the most performant version. You'll also benefit from bug
 fixes, new features and compatibility improvements.
 
-Once you're up-to-date, we're here to automate away the pain of staying on the
-latest version.
+Once you're up-to-date, we're here to automate away the pain of staying that
+way.
 
 Happy Thanksgiving.
 
