@@ -18,7 +18,8 @@ and issue reproduction cases on Yarn, npm, and Pipenv, and of course Dependabot
 is free for open source repos and always will be.
 
 Moshe Zadka has a great post on [how to give thanks to open source maintainers][zadka-article].
-We'd like to add an 11th item to his list of ways to support that silent army:
+We'd like to add a 0th item (because we think it's the minimum we should all do)
+to his list of ways to support that silent army:
 
 **Update your dependencies.**
 
