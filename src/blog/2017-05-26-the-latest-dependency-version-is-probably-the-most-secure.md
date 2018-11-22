@@ -49,7 +49,7 @@ We've [open-sourced][jupyter-notebook] the code to replicate all of the results 
 ### The results
 
 |                    | Always up-to-date | Late adopter | Reactive |
-|------------------------------------------------------------------|
+|--------------------|-------------------|--------------|----------|
 | Not affected       | 16%               | 15%          | 8%       |
 | Fix by upgrading   | 34%               | 35%          | 43%      |
 | Fix by downgrading | 3%                | 3%           | 3%       |
