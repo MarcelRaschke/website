@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Harry Marr <harry.marr@gmail.com>",
   "dependencies": {
-    "@svgr/webpack": "^4.0.4",
+    "@svgr/webpack": "^4.1.0",
     "date-fns": "^1.29.0",
     "gatsby": "^2.0.55",
     "gatsby-codemods": "^1.0.7",
