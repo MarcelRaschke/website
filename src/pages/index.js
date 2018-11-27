@@ -677,7 +677,7 @@ class IndexPage extends React.Component {
                     </div>
                   </div>
                   <div className="pricing-box-offer">
-                    <p>Free trial for 14 days!</p>
+                    <p>Free trial for 14 days</p>
                   </div>
                 </div>
                 <div className="pricing-box">
@@ -695,7 +695,7 @@ class IndexPage extends React.Component {
                     </div>
                   </div>
                   <div className="pricing-box-offer">
-                    <p>Free trial for 14 days!</p>
+                    <p>Free trial for 14 days</p>
                   </div>
                 </div>
                 <div className="pricing-box">
@@ -713,7 +713,7 @@ class IndexPage extends React.Component {
                     </div>
                   </div>
                   <div className="pricing-box-offer">
-                    <p>Free trial for 14 days!</p>
+                    <p>Free trial for 14 days</p>
                   </div>
                 </div>
               </div>
