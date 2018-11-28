@@ -20,7 +20,7 @@
     "http-proxy-middleware": "^0.19.1",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
-    "qs": "^6.5.2",
+    "qs": "^6.6.0",
     "react": "^16.6.3",
     "react-countup": "^4.0.0",
     "react-dom": "^16.6.3",
