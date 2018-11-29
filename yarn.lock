@@ -5021,10 +5021,10 @@ gatsby-link@^2.0.6:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-feed@^2.0.9:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.9.tgz#fed0908164331910b6299150d27b794d6d2dac90"
-  integrity sha512-Ro4nL6x4V0Z8+q15ceoMXYg41UZWo4/CAFnt0RW5WFuYQZOaqNfhxrHHNMEjI0tp2P2a4t0zLArY6uX8oHgVEQ==
+gatsby-plugin-feed@^2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.10.tgz#77c71809354f7b4d1c97b1b172643ee587ba5f99"
+  integrity sha512-Qw4R+oYWEIOW245SCzd4NPJ4s4X7JMGEvTkeFQ6vDUIGerfVtLSWq/aRi8JJsqi4bPl/Hor2Y01KhI+j9OwQ8g==
   dependencies:
     "@babel/runtime" "^7.0.0"
     lodash.merge "^4.6.0"
