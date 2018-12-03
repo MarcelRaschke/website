@@ -100,12 +100,6 @@ class IndexPage extends React.Component {
   };
 
   render() {
-    const {
-      mergedPrsCount,
-      activeAccountsCount,
-      accountsMergingPrsCount
-    } = this.state;
-
     return (
       <Layout>
         <div className="main-background">
@@ -148,7 +142,7 @@ class IndexPage extends React.Component {
             <div className="small-hexagons-gradient">
               <div className="container">
                 <div className="section how-it-works">
-                  <a name="how-it-works" />
+                  <a name="how-it-works" href />
                   <h2>How it works</h2>
                   <div className="how-it-works-boxes">
                     <div className="how-it-works-box">
@@ -305,7 +299,7 @@ class IndexPage extends React.Component {
           <div className="small-hexagons-rotated-gradient">
             <div className="container">
               <div className="section languages">
-                <a name="languages" />
+                <a name="languages" href />
                 <h2>Supported languages</h2>
                 <div className="language-boxes">
                   <div className="language-box-container">
@@ -471,7 +465,7 @@ class IndexPage extends React.Component {
         <div className="customers-bg">
           <div className="container">
             <div className="section customers">
-              <a name="customers" />
+              <a name="customers" href />
               <h2>Trusted by</h2>
               <div className="CustomerLogos">
                 <div className="CustomerLogos-Item">
@@ -648,7 +642,7 @@ class IndexPage extends React.Component {
         <div className="pricing-bg">
           <div className="container">
             <div className="section pricing">
-              <a name="pricing" />
+              <a name="pricing" href />
               <h2>Pricing</h2>
               <div className="pricing-boxes">
                 <div className="pricing-box">

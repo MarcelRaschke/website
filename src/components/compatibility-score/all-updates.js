@@ -18,7 +18,6 @@ class AllUpdates extends React.Component {
             </span>
             <span className="repo-name">{dependencyName}</span>
           </h2>
-          <h3 className="subtitle-version" />
 
           {this.compatibilityBoxes()}
         </div>
@@ -45,7 +44,9 @@ class AllUpdates extends React.Component {
           />
           {this.recentUpdates()}
           <span className="compatibility-scores-more-link">
-            <a onClick={this.showMoreUpdates.bind(this)}>...see more</a>
+            <a onClick={this.showMoreUpdates.bind(this)} href>
+              ...see more
+            </a>
           </span>
         </div>
 

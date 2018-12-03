@@ -5,7 +5,14 @@
   "author": "Harry Marr <harry.marr@gmail.com>",
   "dependencies": {
     "@svgr/webpack": "^4.1.0",
+    "babel-eslint": "^10.0.1",
     "date-fns": "^1.29.0",
+    "eslint": "^5.9.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "gatsby": "^2.0.60",
     "gatsby-codemods": "^1.0.8",
     "gatsby-link": "^2.0.1",
@@ -30,9 +37,23 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
     "prettier": "^1.15.3"
   },
   "repository": {

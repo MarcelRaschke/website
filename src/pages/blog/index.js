@@ -3,7 +3,6 @@ import React from "react";
 import { format as formatDate } from "date-fns";
 import BlogLayout from "../../components/blog-layout";
 
-const slugifyPath = path => path.match(/\d{4}-\d{2}-\d{2}-(.*).md/)[1];
 const postUrl = post => "/blog" + post.fields.slug;
 
 const PostPreview = ({ post }) => (

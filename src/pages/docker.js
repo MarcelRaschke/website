@@ -26,7 +26,7 @@ const DockerPage = () => (
 
       <div className="container">
         <div className="section how-it-works">
-          <a name="how-it-works" />
+          <a name="how-it-works" href />
           <h2>How it works</h2>
           <div className="how-it-works-boxes">
             <div className="how-it-works-box">

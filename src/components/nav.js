@@ -96,7 +96,7 @@ export default class Nav extends React.Component {
         {/* This "nav-toggle" hamburger menu is only visible on mobile */}
         {/* You need JavaScript to toggle the "is-active" className on "nav-menu" */}
         <div className="nav-right small-screen-only">
-          <a className="nav-toggle" onClick={() => this.navToggle()}>
+          <a className="nav-toggle" href onClick={() => this.navToggle()}>
             <span />
             <span />
             <span />
