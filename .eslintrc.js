@@ -7,14 +7,17 @@ module.exports = {
 
   parser: "babel-eslint",
 
-  plugins: ["import", "jsx-a11y", "react"],
+  plugins: ["import", "jsx-a11y", "react", "cypress"],
+
+  extends: ["plugin:cypress/recommended"],
 
   env: {
     browser: true,
     commonjs: true,
     es6: true,
     jest: true,
-    node: true
+    node: true,
+    "cypress/globals": true
   },
 
   parserOptions: {
