@@ -2,7 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: node:10
+      # the Docker image with Cypress dependencies
+      - image: cypress/base:8
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
     working_directory: ~/website
     steps:
       - checkout
@@ -11,9 +15,13 @@ jobs:
           - v1-dependencies-{{ checksum "yarn.lock" }}
           - v1-dependencies-
       - run: yarn install
-      - run: yarn lint
-      - run: yarn run test:e2e:ci
       - save_cache:
           paths:
             - ~/website/node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn lint
+      - run: yarn run test:e2e:ci
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots

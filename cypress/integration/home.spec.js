@@ -1,11 +1,11 @@
 /// <reference types="Cypress" />
 
-context("home", () => {
+describe("Home page", () => {
   beforeEach(() => {
     cy.visit("http://localhost:8000");
   });
 
-  it("renders", function() {
+  it("renders header", function() {
     cy.contains("Automated dependency updates");
   });
 });
