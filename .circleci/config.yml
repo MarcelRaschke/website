@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       # the Docker image with Cypress dependencies
-      - image: cypress/base:8
+      - image: cypress/base:10
         environment:
           ## this enables colors in the output
           TERM: xterm
@@ -21,6 +21,8 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn lint
       - run: yarn run test:e2e:ci
+      - store_test_results:
+          path: results
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
