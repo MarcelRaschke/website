@@ -18,6 +18,7 @@ jobs:
       - save_cache:
           paths:
             - ~/website/node_modules
+            - ~/.cache
           key: v1-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn lint
       - run: yarn run test:e2e:ci
