@@ -25,7 +25,6 @@
   text-align: left;
   margin: 60px 0;
   padding: 20px 0;
-  overflow: hidden;
   @media only screen and (min-width: 768px) {
     text-align: center;
   }
@@ -354,9 +353,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 -10px;
   max-width: 860px;
+
   @media only screen and (min-width: 768px) {
+    margin: 0 auto;
     justify-content: center;
   }
 }
@@ -438,7 +439,6 @@ a .language-name {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 60px;
-  overflow: visible;
 }
 
 .pricing-bg .container {
