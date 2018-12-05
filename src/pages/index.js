@@ -7,7 +7,7 @@ import customerPlatedLogo from "../images/customer-plated.svg";
 import customerMojLogo from "../images/customer-moj.svg";
 import customerThoughbotLogo from "../images/customer-thoughtbot.svg";
 import customerFundingCircleLogo from "../images/customer-funding-circle.svg";
-import customerOptimizelyLogo from "../images/customer-optimizely.svg";
+import customerAcurisLogo from "../images/customer-acuris.svg";
 import customerRubyTogetherLogo from "../images/customer-ruby-together.svg";
 import customerGoCardlessLogo from "../images/customer-gocardless.svg";
 import customerCheckrLogo from "../images/customer-checkr.svg";
@@ -575,10 +575,10 @@ class IndexPage extends React.Component {
                 </div>
                 <div className="CustomerLogos-Item">
                   <div className="CustomerLogos-Item-Content">
-                    <a href="https://www.optimizely.com">
+                    <a href="https://www.acuris.com">
                       <img
                         className="CustomerLogos-Item-Logo"
-                        src={customerOptimizelyLogo}
+                        src={customerAcurisLogo}
                       />
                     </a>
                   </div>
