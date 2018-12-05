@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  test:
     docker:
       # the Docker image with Cypress dependencies
       - image: cypress/base:10
@@ -22,8 +22,14 @@ jobs:
       - run: yarn lint
       - run: yarn run test:e2e:ci
       - store_test_results:
-          path: results
+          path: cypress/results
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
+
+workflows:
+  version: 2
+  tests:
+    jobs:
+      - test
