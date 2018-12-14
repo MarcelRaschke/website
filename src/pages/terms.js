@@ -239,7 +239,9 @@ const TermsPage = () => (
           appear in Dependabot's reference lists including any name, trademark
           or logo of the customer. This includes, but is not limited to,
           descriptions on the Website, any other Dependabot websites,
-          presentations, presentation material, and press announcements.
+          presentations, presentation material, and press announcements. The
+          customer may opt out of being included in any/all such promotional
+          material by contacting Dependabot at any time.
         </p>
         <h3>Term and Termination</h3>
         <p>
