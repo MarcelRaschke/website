@@ -28,9 +28,9 @@
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "qs": "^6.6.0",
-    "react": "^16.7.0",
+    "react": "^17.0.1",
     "react-countup": "^4.0.0",
-    "react-dom": "^16.7.0",
+    "react-dom": "^17.0.1",
     "react-helmet": "^5.2.0"
   },
   "scripts": {
